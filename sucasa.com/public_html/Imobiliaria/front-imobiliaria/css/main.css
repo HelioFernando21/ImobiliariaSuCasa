@@ -1,0 +1,534 @@
+body{
+    background-color: #fdfdfd;
+}
+
+#toast-container {
+  top: auto !important;
+  right: auto !important;
+  bottom: 10%;
+  left:7%;  
+}
+
+
+
+.credentialOption{
+    color: #1565c0; 
+    font-weight: 600; 
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.ofertaText{
+    color:#0d47a1 ;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.plusOffer {
+    color:#f57c00;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.sloganHome{
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 400;
+    text-shadow: 2px 2px #666;
+}
+
+.backWhite{
+   background-color: #fff;
+}
+
+.menuBar{
+    height: 5px;
+    background-color:#1565c0;
+}
+
+
+
+.optionMenuHome{
+    height: 50px;
+    margin-top: 50px;
+    cursor: pointer;
+    padding: 10px 0px !important;
+    background-color: #5e35b1 !important;
+}
+.optionMenuHome:hover{
+    background-color: #7e57c2 !important;
+}
+
+.optionMenuHome i{
+    position: relative;
+    top: 4px;
+    cursor: pointer;
+    color: #fff;
+}
+.optionMenuHome label{
+    font-size: 1.5rem;
+    margin-left: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.espacoHome{
+    margin-top: 30px;
+}
+
+.no-padding{
+    padding: 0px !important;
+}
+
+
+
+.offerTitleClick{
+    cursor: pointer;
+}
+
+.offerTitle{
+    font-size: 1.2rem;
+    color : #333 !important;
+    font-weight: 500;
+    cursor: pointer;
+    display: block;
+}
+
+.subTitleTipo{
+
+    margin-top: 20px;
+    border: #1e88e5 1px solid;
+    border-left: 0px;
+    color : #1e88e5;
+    font-size: 1.5rem;
+    height: 40px;    
+    padding: 3px 0px 0px 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.offerDesc{    
+    margin-top: 20px;
+}
+
+.offerDesc label{
+    font-size: 1rem;
+    color : #333 !important;
+}
+
+.imOffer:hover .changeColorOffer{
+    color: #7e57c2 !important;
+}
+
+.imOffer:hover .changeColorOfferSub{
+    color: #7e57c2 !important;
+    border: #7e57c2 1px solid;
+    border-left: 0px;
+}
+
+@media only screen and (max-width: 600px){
+    .backHome{
+        background-image: url("../images/background-home2.jpg");
+        height:450px;
+        background-size:cover; 
+        background-position:center center; 
+        background-repeat:no-repeat; 
+        text-transform: uppercase;
+    }
+}
+
+@media only screen and (min-width: 601px){
+    .backHome{
+        background-image: url("../images/background-home2.jpg");
+        height:400px;
+        background-size:cover; 
+        background-position:center center; 
+        background-repeat:no-repeat; 
+        text-transform: uppercase;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .imOffer{
+        height: 660px;
+        margin-top: 20px !important;
+    }
+
+    .imageOffer{
+
+        height: 280px;
+        
+        background-size:cover; 
+        background-position:center center; 
+        background-repeat:no-repeat; 
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .offerText{
+        position: relative;
+        height: 250px;
+        padding: 20px !important;
+    }
+
+    
+    
+    .subTitlePreco{
+    
+        margin-top: 20px;
+        border: #1e88e5 1px solid;
+        border-left: 0px;
+        color : #1e88e5;
+        font-size: 1.6rem;
+        height: 50px;    
+        padding: 5px 0px 0px 5px;
+        text-transform: uppercase;
+        font-weight: 500;
+        cursor: pointer;
+        display: block;
+    }
+
+    .borderFilterRSMHide{
+        border-right: 0px !important;
+    }
+    
+}
+
+@media only screen and (min-width: 993px){
+    .offerText{
+        position: relative;
+        height: 100%;
+        padding: 20px !important;
+    }
+
+    .imOffer{
+        height: 280px;
+        margin-top: 20px !important;
+    }
+
+    .imageOffer{
+
+        height: 100%;
+        
+        background-size:cover; 
+        background-position:center center; 
+        background-repeat:no-repeat; 
+        text-transform: uppercase;
+        cursor: pointer;
+    }    
+    
+    .subTitlePreco{
+    
+        margin-top: 20px;
+        border: #1e88e5 1px solid;
+        border-left: 0px;
+        color : #1e88e5;
+        font-size: 1.7rem;
+        height: 50px;    
+        padding: 5px 0px 0px 5px;
+        text-transform: uppercase;
+        font-weight: 500;
+        cursor: pointer;
+        display: block;
+    }  
+    
+    .borderFilterSMHide{
+        display: none;
+    }
+    
+}
+
+.credentialOptionDiv{
+    z-index: 10;
+    position: absolute;
+    right: 20px;
+}
+
+.credentialPhrase{
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.divisaoCredencial{
+    border-left: 2px solid #d1c4e9;
+    height: 760px;
+}
+
+.credentialOptionCad{
+    margin-top: 30px;
+}
+
+.credentialOptionCad label{
+    font-size: 1.3rem;
+    color: #333;
+    display: block;
+    font-weight: 500;
+}
+
+.credentialOptionCad button{
+    margin-top: 15px;
+   
+}
+
+.paginationIm {
+    margin-top: 20px;
+}
+
+.paginationIm label {
+    color:#333333 !important;
+    font-size: 1.2rem !important;
+    margin: 0px 10px 0px 10px !important;
+    font-weight: 400;  
+}
+
+.borderRFilter{
+    border-right: 1px solid #d1c4e9  ;
+    box-sizing: border-box !important;
+}
+
+.borderTFilter{
+    border-top: 1px solid #d1c4e9  ;
+    height: 1px;
+    box-sizing: border-box !important;
+    margin: 20px 0px;
+}
+
+.backFilters{
+    background-color: #fff;
+}
+
+.filterTitle{
+    color: #6f6f6f;
+}
+
+.paginationIm input{
+    text-align: center !important; 
+    width: 50px !important;
+    margin-left: 10px !important;
+    font-size: 1.2rem !important;
+    font-weight: 400;
+}
+
+ul.dropdown-content.select-dropdown li span {
+    color: #3ea5ff ; 
+}
+
+[type="radio"]:checked + label::after, [type="radio"].with-gap:checked + label::after {
+    background-color: #3ea5ff  !important;
+}
+[type="radio"]:checked + label::after, [type="radio"].with-gap:checked + label::before, [type="radio"].with-gap:checked + label::after {
+    border: 2px solid #3ea5ff  !important;
+}
+
+.rzslider .rz-pointer {  
+    background-color: #3ea5ff  !important; 
+}
+
+.rzslider .rz-selection { 
+    background: #3ea5ff  !important;  
+}
+
+
+.filterTitleHead{
+    margin-bottom: 30px;
+}
+
+.filterTitleHead label{
+    color:#8e24aa  ;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.padSelFiler{
+    padding-right: 0px !important;
+}
+
+.filterTitleHead i{
+    margin-right: 10px;
+    
+}
+
+.titleAdvertisement{
+    margin-top: 30px;
+    
+}
+.titleAdvertisement label{
+    color: #0d47a1;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.myAdvertisement{
+    height: 50px;
+    padding: 0px !important;
+    margin: 20px 0px 0px 0px !important;
+  
+}
+
+.myAdvertisement #title{
+    font-size: 1.5rem;
+    padding: 10px 10px !important;
+    color: #434343;
+}
+
+
+.myAdvertisement #toggle{
+    font-size: 2rem;
+    height: 100%;
+    cursor: pointer;
+    color: #7e57c2; 
+}
+
+.myAdvertisement #house{    
+    position: relative;
+    top: 3px;
+}
+
+.myAdvertisement #toggle:hover{
+    background-color: #f9f9f9 !important;
+}
+
+.dsAdvertisement{
+    display: none;
+    margin: -1px 0px 0px 0px !important;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+}
+
+.alignImage
+{
+    width:160px;
+    height:120px;
+    overflow:hidden;
+    float:left;
+    
+    background-color: #EEEEEE;
+    background-position: center 25%;
+    background-repeat: no-repeat;
+    display: block;
+}   
+
+.itemLMyImage{
+    padding: 15px 10px 0px 10px !important;
+}
+
+
+
+.itemLMyImage #image{
+    height: 120px;
+}
+
+.divisorImagesList{
+    height: 1px;    
+    border-bottom: 1px solid #d1c4e9;
+}
+
+.text-ellipsis{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.listMyImages{
+    border: 1px solid #d1c4e9;
+    height: 483px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.addPhoto{
+    margin-bottom: 15px;
+}
+.addPhoto a{
+    cursor: pointer;
+    
+}
+
+.delPhoto{
+    padding: 50px 0px 0px 0px !important;
+    margin-bottom: 20px;
+}
+
+.delPhoto a{
+    cursor: pointer;
+}
+
+.no-Padding-right{
+    padding-right: 0px !important; 
+}
+
+.slider .indicators .indicator-item.active {
+    background-color: #5e35b1 !important;
+}
+
+.arrow-image{
+    font-size: 3rem !important;
+    position: relative;
+    top: 200px;
+    color: #5e35b1 !important;
+    cursor: pointer;
+}
+
+.contOffer{
+    margin-top: 0px !important;
+}
+
+.contOffer .telCont{
+    font-size: 1.3rem !important;    
+    color:#666;
+}
+
+.contOffer .telNumber{
+    font-size: 1.7rem !important;
+    color: #1565c0; 
+}
+
+.priceOffer{
+    margin-top: 20px !important;
+}
+
+.priceOffer .priceTitle{
+    font-size: 1.3rem !important;    
+    color:#666;
+}
+
+.priceOffer .priceNumber{
+    font-size: 1.7rem !important;
+    color: #1565c0; 
+}
+
+.titleAdd{
+    font-size: 1.5rem !important;
+    color:#666;
+    display: block;
+    text-transform: uppercase;
+}
+
+.descAddress{
+    font-size: 1.7rem !important;
+    color:#333;
+    display: block;
+}
+
+.titleDescOffer .title{
+    font-size: 1rem !important;
+    color:#666;
+    text-transform: uppercase;
+}
+
+.titleDescOffer .desc{
+    font-size: 1.5rem !important;
+    color:#333;
+    text-transform: uppercase;
+}
+
+.descCrud{
+    resize: none;
+    height: 200px;
+}

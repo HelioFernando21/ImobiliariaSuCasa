@@ -1,0 +1,1085 @@
+
+==================== FINAL INTERFACE ====================
+2018-06-12 00:27:13.815974 UTC
+
+interface imobiliaria-0.0.0-HqXHZMLZhTlJ6HZ3NKR0jm:Handler.Login 8002
+  interface hash: 77d59342972bd75996151046ef6a443b
+  ABI hash: b4546e194a60de23a09e1ba71e138d19
+  export-list hash: 47e45c537cf8c03ef900d724bb457636
+  orphan hash: 833ed69fbcf93b230301c787da73684e
+  flag hash: 6d73493edc0c8da032de4b3f8604d846
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Handler.Login.autenticar
+  Handler.Login.geraToken
+  Handler.Login.postFinalSessaoR
+  Handler.Login.postIniciarSessaoR
+  Handler.Login.Loginn{Handler.Login.Loginn email senha}
+module dependencies: Foundation Import Import.NoFoundation Model
+                     Settings Settings.StaticFiles
+package dependencies: ReadArgs-1.2.3@ReadArgs-1.2.3-FZlTw1cmwFABXd9Qu17GpK
+                      StateVar-1.1.0.4@StateVar-1.1.0.4-5dJbnTVECtEAhfJXPZKdbO
+                      adjunctions-4.3@adjunctions-4.3-A5jfd1yrmaY4DRMJuiquBp
+                      aeson-1.1.2.0@aeson-1.1.2.0-7ssY6fy1GxZGXxTPcOtf2k
+                      aeson-compat-0.3.6@aeson-compat-0.3.6-HFlClSgXxbU7TMoWqS5Yu4
+                      ansi-terminal-0.6.3.1@ansi-terminal-0.6.3.1-3RTqikoQf47ajVD9m8zgB
+                      appar-0.1.4@appar-0.1.4-DGWHHt2WRn9FI49prcwO9
+                      array-0.5.1.1@array-0.5.1.1
+                      asn1-encoding-0.9.5@asn1-encoding-0.9.5-CmDkwNPA51zjuzFcENFZ5
+                      asn1-parse-0.9.4@asn1-parse-0.9.4-HSgo3I4Jg5sAQWRFdyScvb
+                      asn1-types-0.3.2@asn1-types-0.3.2-Ls8owv2hbTfEqG1LKzBcjy
+                      async-2.1.1.1@async-2.1.1.1-8yywY4inVGRLJSCg60gBXj
+                      attoparsec-0.13.1.0@attoparsec-0.13.1.0-3ql4hcH9pGfBAlE21oqFTQ
+                      attoparsec-iso8601-1.0.0.0@attoparsec-iso8601-1.0.0.0-CiauZZhskHA6jYy7CqE2mZ
+                      auto-update-0.1.4@auto-update-0.1.4-EmUvNdmhEju51bHrtaEMpz
+                      base-4.9.1.0
+                      base-compat-0.9.3@base-compat-0.9.3-KeJp8zYMpcS9WibvTcxU22
+                      base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu
+                      base16-bytestring-0.1.1.6@base16-bytestring-0.1.1.6-4E2p94lTx8gIceMhu8Kl9o
+                      base64-bytestring-1.0.0.1@base64-bytestring-1.0.0.1-4O9TExPPz6eI82Yj7L4SIj
+                      basement-0.0.2@basement-0.0.2-HQuQCDQkzPb1RQsskWNdsw
+                      basic-prelude-0.6.1.1@basic-prelude-0.6.1.1-888xsTDtS2CGSoHb1JadEF
+                      bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw
+                      binary-0.8.3.0@binary-0.8.3.0
+                      blaze-builder-0.4.0.2@blaze-builder-0.4.0.2-LxClHUTiKUUAxWtvJ5Oeoy
+                      blaze-html-0.9.0.1@blaze-html-0.9.0.1-GQ0yZtPYt2i2KdgnUEOA8p
+                      blaze-markup-0.8.0.0@blaze-markup-0.8.0.0-GsxkVbRgODkgUQDmmDVob
+                      byteable-0.1.1@byteable-0.1.1-2lU1pexQSLj1KbNO17UifQ
+                      byteorder-1.0.4@byteorder-1.0.4-9NlNHkBVdo7F1prFVKrkcH
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      case-insensitive-1.2.0.10@case-insensitive-1.2.0.10-1D5OUKQ7UrJ7IpOe0di4Un
+                      cereal-0.5.4.0@cereal-0.5.4.0-BsAGxfp8yAs3CiRo2E875e
+                      chunked-data-0.3.0@chunked-data-0.3.0-OOunTfArGE2y1nE8RKgW4
+                      cipher-aes-0.2.11@cipher-aes-0.2.11-Iep5jMzxM1u3mGzM17Av1H
+                      classy-prelude-1.2.0.1@classy-prelude-1.2.0.1-DI7QyZr6dYQLSGY5Zda29N
+                      classy-prelude-conduit-1.2.0@classy-prelude-conduit-1.2.0-4VNoIEo9SLt6t7N4PwpkXU
+                      classy-prelude-yesod-1.2.0@classy-prelude-yesod-1.2.0-4tCQqVxZHk5JE3z6jrBT3F
+                      clientsession-0.9.1.2@clientsession-0.9.1.2-1HgInPlmxWUKWaagfkcDtu
+                      comonad-5.0.2@comonad-5.0.2-Fq9Xy9jdx6uIyJZn00E6Yc
+                      conduit-1.2.12.1@conduit-1.2.12.1-CTYKTJmwFo81r4LrAKDD8i
+                      conduit-combinators-1.1.1@conduit-combinators-1.1.1-CbpWlJJbANPFWzQzUVNtDU
+                      conduit-extra-1.1.17@conduit-extra-1.1.17-LHyPtC0nGlzDcgVxOcd4h4
+                      connection-0.2.8@connection-0.2.8-7E5s9ndt8OF7NNDH3ifO8K
+                      constraints-0.9.1@constraints-0.9.1-5mmQfXdFR8IpJ6JZxzjTB
+                      containers-0.5.7.1@containers-0.5.7.1
+                      contravariant-1.4@contravariant-1.4-29zF0Im431177ovfbHYCGv
+                      cookie-0.4.2.1@cookie-0.4.2.1-ImqC1hbvUERAwQQgqhuUAD
+                      cprng-aes-0.6.1@cprng-aes-0.6.1-CtFLLcV33ZSKCmRTVWdrW7
+                      crypto-api-0.13.2@crypto-api-0.13.2-DBhN9RgaKHp5HflQM2s570
+                      crypto-cipher-types-0.0.9@crypto-cipher-types-0.0.9-JSCTZhqOXgH3EkiMgDwxX
+                      crypto-random-0.0.9@crypto-random-0.0.9-381865WP41XFXsmS6fCaFj
+                      cryptonite-0.23@cryptonite-0.23-7SwQljDtwztDJ3Fe01tUO9
+                      cryptonite-conduit-0.2.0@cryptonite-conduit-0.2.0-LH1qspLlLTXKv70D84KCUO
+                      css-text-0.1.2.2@css-text-0.1.2.2-GtPTSZ9vPefILuf2bXZD6W
+                      data-default-0.7.1.1@data-default-0.7.1.1-Atv1ZD6t1rI1MrH9qSGaQC
+                      data-default-class-0.1.2.0@data-default-class-0.1.2.0-GsXqKN6o1X9jr0fF5qCVD
+                      data-default-instances-containers-0.0.1@data-default-instances-containers-0.0.1-bob6IQGdJq92c061H46zK
+                      data-default-instances-dlist-0.0.1@data-default-instances-dlist-0.0.1-LBT1sjxIvyd63eC0aI9yNO
+                      data-default-instances-old-locale-0.0.1@data-default-instances-old-locale-0.0.1-9zaGDEmgOixKkmLylWdN5l
+                      deepseq-1.4.2.0@deepseq-1.4.2.0
+                      deepseq-generics-0.2.0.0@deepseq-generics-0.2.0.0-IjS8Jfo7YCzLKpV8N96gbz
+                      directory-1.3.0.0@directory-1.3.0.0
+                      distributive-0.5.3@distributive-0.5.3-IX4kyVcHAyoH4uFYrsjY1R
+                      dlist-0.8.0.3@dlist-0.8.0.3-BHFBNaw8k6n9WiaUNzoXpk
+                      dlist-instances-0.1.1.1@dlist-instances-0.1.1.1-JrfDmjAHlXKJeRjjD0rY07
+                      easy-file-0.2.1@easy-file-0.2.1-rguMBNaECxLikt4CCDx0D
+                      email-validate-2.3.1@email-validate-2.3.1-4WsGncp61DkHAczMlRRvml
+                      entropy-0.3.8@entropy-0.3.8-14HIw40nRRY968j6AdY1H4
+                      exceptions-0.8.3@exceptions-0.8.3-ADEDRATtUrMK1JW4zMQ9U
+                      fast-logger-2.4.10@fast-logger-2.4.10-7GMVhEi1femFXwSQxV5ynm
+                      file-embed-0.0.10@file-embed-0.0.10-KWMmUDaNSRP7AxWSEHlrrK
+                      filepath-1.4.1.1@filepath-1.4.1.1
+                      foundation-0.0.15@foundation-0.0.15-Cl70JNuHcCuIxk4jr0SplI
+                      free-4.12.4@free-4.12.4-C2gBQV0m8J42HxqSLTFyVx
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol
+                      hourglass-0.2.10@hourglass-0.2.10-pnbvWmzfcY1rOFETQEmcY
+                      http-api-data-0.3.7.1@http-api-data-0.3.7.1-AT41KDpP9ayH63FPNXWrvF
+                      http-client-0.5.7.0@http-client-0.5.7.0-ZH40bByQedKxMmMnUi42q
+                      http-client-tls-0.3.5.1@http-client-tls-0.3.5.1-9yHxBE9KmNa1D1xDvn7C4m
+                      http-conduit-2.2.3.2@http-conduit-2.2.3.2-5MsxxcFsbFW2aX71Hx1I7R
+                      http-date-0.0.6.1@http-date-0.0.6.1-AkYFHBFn90lGSerD29arC9
+                      http-types-0.9.1@http-types-0.9.1-G7E1zHPzooHCYxKqGuQmxY
+                      http2-1.6.3@http2-1.6.3-5WuWRsIVuKR43Sq9Cs2O4Z integer-gmp-1.0.0.1
+                      integer-logarithms-1.0.2@integer-logarithms-1.0.2-92lMiWV9mmYAwfMEYgfQ0D
+                      iproute-1.7.1@iproute-1.7.1-EJjAtfniBUorobFQnk7lR
+                      kan-extensions-5.0.2@kan-extensions-5.0.2-8LTJJ1zQJWB7SfewWXUuqX
+                      keys-3.11@keys-3.11-3rCPtsJiP6i6WPjfB1rcVT
+                      lifted-async-0.9.3@lifted-async-0.9.3-1Yr94BjFrURGjFULK2k39c
+                      lifted-base-0.2.3.11@lifted-base-0.2.3.11-Ei0JSPdt7KOCD2HIA5jFqV
+                      memory-0.14.8@memory-0.14.8-GdBguxykhKWC3gIuWq62O9
+                      mime-types-0.1.0.7@mime-types-0.1.0.7-6b3z22GcDYZLEl2kkfCUAB
+                      mmorph-1.0.9@mmorph-1.0.9-5bASEvmIkr5CpdAYXwPsn0
+                      monad-control-1.0.2.2@monad-control-1.0.2.2-1Ci8dYJ8Tb7E3HTcTqOb8l
+                      monad-logger-0.3.25.1@monad-logger-0.3.25.1-C5T06yv6lw54Umfdl3S8et
+                      monad-loops-0.4.3@monad-loops-0.4.3-ERCN4ZKCeeS5SRhwqXsLBP
+                      monad-unlift-0.2.0@monad-unlift-0.2.0-JaCplLBosjYCz9UWF6Saxw
+                      mono-traversable-1.0.2.1@mono-traversable-1.0.2.1-7cD9xrLpSxs61tMXUUbUIV
+                      mono-traversable-instances-0.1.0.0@mono-traversable-instances-0.1.0.0-cMPVlKCPiiIbLvZydxEFB
+                      mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      mutable-containers-0.3.3@mutable-containers-0.3.3-LD59mBwpMYWF0vy4UyNV9R
+                      mwc-random-0.13.6.0@mwc-random-0.13.6.0-FYg9HqO0pqB8vcniiPVzVy
+                      network-2.6.3.2@network-2.6.3.2-IsLM4TXcLoRI0fmmBYVyQz
+                      network-uri-2.6.1.0@network-uri-2.6.1.0-7BN1tbB3iHQ2XgvmqLAYph
+                      old-locale-1.0.0.7@old-locale-1.0.0.7-KGBP1BSKxH5GCm0LnZP04j
+                      old-time-1.1.0.3@old-time-1.1.0.3-KWRsMSdY26c2L27Y9n9cyq
+                      parsec-3.1.11@parsec-3.1.11-1aqiimsgq2dCv7eoaC8WuX
+                      path-pieces-0.2.1@path-pieces-0.2.1-Ap205zdHJCr3aorBcPaHM5
+                      pem-0.2.2@pem-0.2.2-CkEwei5500yF2642aAaOAi
+                      persistent-2.7.0@persistent-2.7.0-EkiQsDHg8Z6Ikjfvk7Im1u
+                      persistent-postgresql-2.6.1@persistent-postgresql-2.6.1-2dvMQeNrMidL0mEJqjlR9n
+                      persistent-template-2.5.2@persistent-template-2.5.2-LNPM4iCBuHkAGJb4ZvbyJS
+                      pointed-5@pointed-5-GlRizu1aJXO3QG4Xelc8BV
+                      postgresql-libpq-0.9.3.1@postgresql-libpq-0.9.3.1-PNtzTLZ1kPBlp0W2VWiJp
+                      postgresql-simple-0.5.3.0@postgresql-simple-0.5.3.0-7wqiM7f7ESv7wSvmAjfLqt
+                      prelude-extras-0.4.0.3@prelude-extras-0.4.0.3-BhL9U5k7NtGJn1itwIHt2Y
+                      pretty-1.1.3.3@pretty-1.1.3.3
+                      primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh
+                      process-1.4.3.0@process-1.4.3.0
+                      profunctors-5.2.1@profunctors-5.2.1-Ga89Nyw0d7LBEIoX4AZ6gT
+                      psqueues-0.2.4.0@psqueues-0.2.4.0-CvAhEbuBRGQCwl61vq8zYS
+                      random-1.1@random-1.1-9tceXaeYIMZ4JrKq20Egog
+                      resource-pool-0.2.3.2@resource-pool-0.2.3.2-GmoeVeJ8L5Y51jMJ5dPk3U
+                      resourcet-1.1.9@resourcet-1.1.9-L2BUQrxWZMwDiwhcuyPuNi
+                      safe-0.3.15@safe-0.3.15-2Yd45VWFfdcKqKyispOifY
+                      safe-exceptions-0.1.6.0@safe-exceptions-0.1.6.0-8HmohVTen8f1fXhFM1N1R3
+                      say-0.1.0.0@say-0.1.0.0-4kg0VW7izQr10eu93ritVO
+                      scientific-0.3.5.2@scientific-0.3.5.2-FM2NdrNTcdbCDq9wuNnhIA
+                      securemem-0.1.9@securemem-0.1.9-I1DISfcspndD6idpVbMBWq
+                      semigroupoids-5.2.1@semigroupoids-5.2.1-Db8txM8kTsI6Y49CY6g5Jn
+                      shakespeare-2.0.14@shakespeare-2.0.14-FNvjJPHGgnVJw5IpBEAfAj
+                      silently-1.2.5@silently-1.2.5-HsbqnAAyIOA8viZ4Sccs0a
+                      simple-sendfile-0.2.25@simple-sendfile-0.2.25-4uYtK5a0djFILo2ePfLs47
+                      skein-1.0.9.4@skein-1.0.9.4-H6iwU6ZhWxE28U4xCLTfo3
+                      socks-0.5.5@socks-0.5.5-JArtPcFTnbCItWBjXwWAhO
+                      split-0.2.3.2@split-0.2.3.2-CJl40zTyCIV16Pr60nb7CT
+                      stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      stm-chans-3.0.0.4@stm-chans-3.0.0.4-JX6Y7GVvdkg3BduVhEnPWu
+                      streaming-commons-0.1.17@streaming-commons-0.1.17-6xuIA5RXrs65yyeq3HWIWP
+                      stringsearch-0.3.6.6@stringsearch-0.3.6.6-2soGORichTR6reHVhDqKip
+                      system-filepath-0.4.13.4@system-filepath-0.4.13.4-1Onr71muBMoJ4AF6FUpTVo
+                      tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt
+                      tagsoup-0.14.1@tagsoup-0.14.1-HO0sHb651BeFnnIxljlexR
+                      template-haskell-2.11.1.0
+                      text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00
+                      time-1.6.0.1@time-1.6.0.1
+                      time-locale-compat-0.1.1.3@time-locale-compat-0.1.1.3-KZ1jqNx8uhlHjmuPPj6V1Y
+                      tls-1.3.11@tls-1.3.11-IxCmr8GdEutIrVRgKylzM6
+                      transformers-0.5.2.0@transformers-0.5.2.0
+                      transformers-base-0.4.4@transformers-base-0.4.4-GKSs0LKukAL8ymq2naFmrH
+                      transformers-compat-0.5.1.4@transformers-compat-0.5.1.4-IuFogs8HAVUJBWVNMhtssu
+                      unix-2.7.2.1@unix-2.7.2.1
+                      unix-compat-0.4.3.1@unix-compat-0.4.3.1-Ausmw6d7KIwA7sl52mzqxC
+                      unix-time-0.3.7@unix-time-0.3.7-EhnEKT4D7hJajV74Sk5BE
+                      unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC
+                      utf8-string-1.0.1.1@utf8-string-1.0.1.1-1DpjxLeTvGg7ttZZojxJR5
+                      uuid-types-1.0.3@uuid-types-1.0.3-HQOuja9trySCcuflACyDTJ
+                      vault-0.3.0.7@vault-0.3.0.7-FSJCPczyPWW8DwvwP76qt4
+                      vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ
+                      vector-algorithms-0.7.0.1@vector-algorithms-0.7.0.1-1qlx0Hst1Fo5WZd0lT7Iw1
+                      vector-instances-3.4@vector-instances-3.4-6qKuR7R2wDjElztDeslDO1
+                      wai-3.2.1.1@wai-3.2.1.1-GYhAFGd1F2uKjCUZVPyC2C
+                      wai-app-static-3.1.6.1@wai-app-static-3.1.6.1-IWVzgvpaMYRH5pqRQk33K1
+                      wai-extra-3.0.20.0@wai-extra-3.0.20.0-Dj9t4P11I8BnwNE6pZcEP
+                      wai-logger-2.3.0@wai-logger-2.3.0-G2LMsBpHwLV49tDfVWxzX4
+                      warp-3.2.13@warp-3.2.13-FhWulh599WH9bUCGJnpWGc
+                      word8-0.1.3@word8-0.1.3-9o1uWQQ6KysJq8GGsVHHit
+                      x509-1.7.2@x509-1.7.2-IixRXIQfpHlXunpaQDNuQ
+                      x509-store-1.6.5@x509-store-1.6.5-LPi8AM9vMZO97SZk6SmtWd
+                      x509-system-1.6.6@x509-system-1.6.6-GUxFbyk0TndCMp8nKvvL3M
+                      x509-validation-1.6.9@x509-validation-1.6.9-4jWSRkWS3kAKZsU0SpJst
+                      xml-conduit-1.5.1@xml-conduit-1.5.1-FiRHhqSLReR4vkwAA3escx
+                      xml-types-0.3.6@xml-types-0.3.6-BlXpqWNn2ZGFM9gCBPuBeT
+                      xss-sanitize-0.3.5.7@xss-sanitize-0.3.5.7-2Pr735gWMIKE1KECS4SIv1
+                      yaml-0.8.23.3@yaml-0.8.23.3-C6ya2ht5lnU5AAyP9utctL
+                      yesod-1.4.5@yesod-1.4.5-GDhOBR6sYcs6xIyNy56Max
+                      yesod-auth-1.4.19@yesod-auth-1.4.19-Lis3qGCnpJgB8Xqabl9Sxo
+                      yesod-core-1.4.37@yesod-core-1.4.37-9j0qKMPCLP0L75AGd8Tz4V
+                      yesod-form-1.4.16@yesod-form-1.4.16-FvSoVGpHA8r2nWU5Chx6PU
+                      yesod-newsfeed-1.6@yesod-newsfeed-1.6-FVeGFThDxmyHNMY2ecmTrZ
+                      yesod-persistent-1.4.2@yesod-persistent-1.4.2-4ZnSn6wFGPBBm9cdlnNUzc
+                      yesod-static-1.5.3.1@yesod-static-1.5.3.1-3fPHfGwGXLD6UjosrxUpf7
+                      zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp
+orphans: attoparsec-0.13.1.0@attoparsec-0.13.1.0-3ql4hcH9pGfBAlE21oqFTQ:Data.Attoparsec.ByteString.Char8
+         attoparsec-0.13.1.0@attoparsec-0.13.1.0-3ql4hcH9pGfBAlE21oqFTQ:Data.Attoparsec.Text.Internal
+         base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         base-orphans-0.6@base-orphans-0.6-AbJ3lKVXygDCG0eeQEv8Iu:Data.Orphans
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         crypto-api-0.13.2@crypto-api-0.13.2-DBhN9RgaKHp5HflQM2s570:Crypto.Classes
+         data-default-instances-containers-0.0.1@data-default-instances-containers-0.0.1-bob6IQGdJq92c061H46zK:Data.Default.Instances.Containers
+         data-default-instances-dlist-0.0.1@data-default-instances-dlist-0.0.1-LBT1sjxIvyd63eC0aI9yNO:Data.Default.Instances.DList
+         data-default-instances-old-locale-0.0.1@data-default-instances-old-locale-0.0.1-9zaGDEmgOixKkmLylWdN5l:Data.Default.Instances.OldLocale
+         hashable-1.2.6.1@hashable-1.2.6.1-2ZLNuHq395GGIHwEHuqZol:Data.Hashable.Generic
+         http-client-0.5.7.0@http-client-0.5.7.0-ZH40bByQedKxMmMnUi42q:Network.HTTP.Client.Request
+         mono-traversable-instances-0.1.0.0@mono-traversable-instances-0.1.0.0-cMPVlKCPiiIbLvZydxEFB:Data.MonoTraversable.Instances
+         network-2.6.3.2@network-2.6.3.2-IsLM4TXcLoRI0fmmBYVyQz:Network.Socket
+         persistent-2.7.0@persistent-2.7.0-EkiQsDHg8Z6Ikjfvk7Im1u:Database.Persist.Sql.Orphan.PersistQuery
+         persistent-2.7.0@persistent-2.7.0-EkiQsDHg8Z6Ikjfvk7Im1u:Database.Persist.Sql.Orphan.PersistStore
+         persistent-2.7.0@persistent-2.7.0-EkiQsDHg8Z6Ikjfvk7Im1u:Database.Persist.Sql.Orphan.PersistUnique
+         persistent-template-2.5.2@persistent-template-2.5.2-LNPM4iCBuHkAGJb4ZvbyJS:Database.Persist.TH
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         system-filepath-0.4.13.4@system-filepath-0.4.13.4-1Onr71muBMoJ4AF6FUpTVo:Filesystem.Path
+         system-filepath-0.4.13.4@system-filepath-0.4.13.4-1Onr71muBMoJ4AF6FUpTVo:Filesystem.Path.CurrentOS
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Show
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+         unix-time-0.3.7@unix-time-0.3.7-EhnEKT4D7hJajV74Sk5BE:Data.UnixTime.Diff
+         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Fusion.Bundle
+         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
+         vector-instances-3.4@vector-instances-3.4-6qKuR7R2wDjElztDeslDO1:Data.Vector.Instances
+         yesod-auth-1.4.19@yesod-auth-1.4.19-Lis3qGCnpJgB8Xqabl9Sxo:Yesod.Auth
+family instance modules: adjunctions-4.3@adjunctions-4.3-A5jfd1yrmaY4DRMJuiquBp:Data.Functor.Rep
+                         attoparsec-0.13.1.0@attoparsec-0.13.1.0-3ql4hcH9pGfBAlE21oqFTQ:Data.Attoparsec.Internal.Types
+                         base-4.9.1.0:Control.Applicative base-4.9.1.0:Data.Complex
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Compose
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.Functor.Sum
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         basement-0.0.2@basement-0.0.2-HQuQCDQkzPb1RQsskWNdsw:Basement.Block.Base
+                         basement-0.0.2@basement-0.0.2-HQuQCDQkzPb1RQsskWNdsw:Basement.BoxedArray
+                         basement-0.0.2@basement-0.0.2-HQuQCDQkzPb1RQsskWNdsw:Basement.Monad
+                         basement-0.0.2@basement-0.0.2-HQuQCDQkzPb1RQsskWNdsw:Basement.MutableBuilder
+                         basement-0.0.2@basement-0.0.2-HQuQCDQkzPb1RQsskWNdsw:Basement.NonEmpty
+                         basement-0.0.2@basement-0.0.2-HQuQCDQkzPb1RQsskWNdsw:Basement.Numerical.Subtractive
+                         basement-0.0.2@basement-0.0.2-HQuQCDQkzPb1RQsskWNdsw:Basement.String
+                         basement-0.0.2@basement-0.0.2-HQuQCDQkzPb1RQsskWNdsw:Basement.String.Encoding.ASCII7
+                         basement-0.0.2@basement-0.0.2-HQuQCDQkzPb1RQsskWNdsw:Basement.String.Encoding.ISO_8859_1
+                         basement-0.0.2@basement-0.0.2-HQuQCDQkzPb1RQsskWNdsw:Basement.String.Encoding.UTF16
+                         basement-0.0.2@basement-0.0.2-HQuQCDQkzPb1RQsskWNdsw:Basement.String.Encoding.UTF32
+                         basement-0.0.2@basement-0.0.2-HQuQCDQkzPb1RQsskWNdsw:Basement.Types.AsciiString
+                         basement-0.0.2@basement-0.0.2-HQuQCDQkzPb1RQsskWNdsw:Basement.Types.OffsetSize
+                         basement-0.0.2@basement-0.0.2-HQuQCDQkzPb1RQsskWNdsw:Basement.UArray.Base
+                         basement-0.0.2@basement-0.0.2-HQuQCDQkzPb1RQsskWNdsw:Basement.UTF8.Base
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Biff
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Clown
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Flip
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Join
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Joker
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Product
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Sum
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Tannen
+                         bifunctors-5.4.2@bifunctors-5.4.2-KcF2f75KyQm5BjgJ8WkHCw:Data.Bifunctor.Wrapped
+                         conduit-1.2.12.1@conduit-1.2.12.1-CTYKTJmwFo81r4LrAKDD8i:Data.Conduit.Internal.Conduit
+                         conduit-1.2.12.1@conduit-1.2.12.1-CTYKTJmwFo81r4LrAKDD8i:Data.Conduit.Internal.Pipe
+                         constraints-0.9.1@constraints-0.9.1-5mmQfXdFR8IpJ6JZxzjTB:Data.Constraint.Forall
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         dlist-0.8.0.3@dlist-0.8.0.3-BHFBNaw8k6n9WiaUNzoXpk:Data.DList
+                         email-validate-2.3.1@email-validate-2.3.1-4WsGncp61DkHAczMlRRvml:Text.Email.Parser
+                         foundation-0.0.15@foundation-0.0.15-Cl70JNuHcCuIxk4jr0SplI:Foundation.Array.Bitmap
+                         foundation-0.0.15@foundation-0.0.15-Cl70JNuHcCuIxk4jr0SplI:Foundation.Array.Chunked.Unboxed
+                         foundation-0.0.15@foundation-0.0.15-Cl70JNuHcCuIxk4jr0SplI:Foundation.Collection.Buildable
+                         foundation-0.0.15@foundation-0.0.15-Cl70JNuHcCuIxk4jr0SplI:Foundation.Collection.Element
+                         foundation-0.0.15@foundation-0.0.15-Cl70JNuHcCuIxk4jr0SplI:Foundation.Collection.Keyed
+                         foundation-0.0.15@foundation-0.0.15-Cl70JNuHcCuIxk4jr0SplI:Foundation.Collection.Mutable
+                         foundation-0.0.15@foundation-0.0.15-Cl70JNuHcCuIxk4jr0SplI:Foundation.Tuple
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         http-client-0.5.7.0@http-client-0.5.7.0-ZH40bByQedKxMmMnUi42q:Network.HTTP.Client
+                         imobiliaria-0.0.0-HqXHZMLZhTlJ6HZ3NKR0jm:Foundation
+                         imobiliaria-0.0.0-HqXHZMLZhTlJ6HZ3NKR0jm:Model
+                         iproute-1.7.1@iproute-1.7.1-EJjAtfniBUorobFQnk7lR:Data.IP.Addr
+                         iproute-1.7.1@iproute-1.7.1-EJjAtfniBUorobFQnk7lR:Data.IP.Range
+                         kan-extensions-5.0.2@kan-extensions-5.0.2-8LTJJ1zQJWB7SfewWXUuqX:Data.Functor.Day
+                         keys-3.11@keys-3.11-3rCPtsJiP6i6WPjfB1rcVT:Data.Key
+                         monad-control-1.0.2.2@monad-control-1.0.2.2-1Ci8dYJ8Tb7E3HTcTqOb8l:Control.Monad.Trans.Control
+                         monad-logger-0.3.25.1@monad-logger-0.3.25.1-C5T06yv6lw54Umfdl3S8et:Control.Monad.Logger
+                         mono-traversable-1.0.2.1@mono-traversable-1.0.2.1-7cD9xrLpSxs61tMXUUbUIV:Data.Containers
+                         mono-traversable-1.0.2.1@mono-traversable-1.0.2.1-7cD9xrLpSxs61tMXUUbUIV:Data.MonoTraversable
+                         mono-traversable-1.0.2.1@mono-traversable-1.0.2.1-7cD9xrLpSxs61tMXUUbUIV:Data.NonNull
+                         mono-traversable-1.0.2.1@mono-traversable-1.0.2.1-7cD9xrLpSxs61tMXUUbUIV:Data.Sequences
+                         mono-traversable-instances-0.1.0.0@mono-traversable-instances-0.1.0.0-cMPVlKCPiiIbLvZydxEFB:Data.MonoTraversable.Instances
+                         mutable-containers-0.3.3@mutable-containers-0.3.3-LD59mBwpMYWF0vy4UyNV9R:Data.Mutable.BRef
+                         mutable-containers-0.3.3@mutable-containers-0.3.3-LD59mBwpMYWF0vy4UyNV9R:Data.Mutable.Class
+                         mutable-containers-0.3.3@mutable-containers-0.3.3-LD59mBwpMYWF0vy4UyNV9R:Data.Mutable.DLList
+                         mutable-containers-0.3.3@mutable-containers-0.3.3-LD59mBwpMYWF0vy4UyNV9R:Data.Mutable.Deque
+                         mutable-containers-0.3.3@mutable-containers-0.3.3-LD59mBwpMYWF0vy4UyNV9R:Data.Mutable.PRef
+                         mutable-containers-0.3.3@mutable-containers-0.3.3-LD59mBwpMYWF0vy4UyNV9R:Data.Mutable.SRef
+                         mutable-containers-0.3.3@mutable-containers-0.3.3-LD59mBwpMYWF0vy4UyNV9R:Data.Mutable.URef
+                         mwc-random-0.13.6.0@mwc-random-0.13.6.0-FYg9HqO0pqB8vcniiPVzVy:System.Random.MWC
+                         network-uri-2.6.1.0@network-uri-2.6.1.0-7BN1tbB3iHQ2XgvmqLAYph:Network.URI
+                         persistent-2.7.0@persistent-2.7.0-EkiQsDHg8Z6Ikjfvk7Im1u:Database.Persist.Class.PersistConfig
+                         persistent-2.7.0@persistent-2.7.0-EkiQsDHg8Z6Ikjfvk7Im1u:Database.Persist.Sql.Orphan.PersistStore
+                         persistent-2.7.0@persistent-2.7.0-EkiQsDHg8Z6Ikjfvk7Im1u:Database.Persist.Sql.Types.Internal
+                         persistent-postgresql-2.6.1@persistent-postgresql-2.6.1-2dvMQeNrMidL0mEJqjlR9n:Database.Persist.Postgresql
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh:Control.Monad.Primitive
+                         primitive-0.6.2.0@primitive-0.6.2.0-4578caNkWQ54Gt1mxLF2Yh:Data.Primitive.Array
+                         resourcet-1.1.9@resourcet-1.1.9-L2BUQrxWZMwDiwhcuyPuNi:Control.Monad.Trans.Resource.Internal
+                         shakespeare-2.0.14@shakespeare-2.0.14-FNvjJPHGgnVJw5IpBEAfAj:Text.Internal.Css
+                         shakespeare-2.0.14@shakespeare-2.0.14-FNvjJPHGgnVJw5IpBEAfAj:Text.Shakespeare
+                         tagged-0.8.5@tagged-0.8.5-1mTloBSoUxv8dqUr8XBGBt:Data.Tagged
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text
+                         text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Lazy
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC:Data.HashMap.Base
+                         unordered-containers-0.2.8.0@unordered-containers-0.2.8.0-Bp9XgxjuHxcI4tFehVMDGC:Data.HashSet
+                         uuid-types-1.0.3@uuid-types-1.0.3-HQOuja9trySCcuflACyDTJ:Data.UUID.Types.Internal
+                         uuid-types-1.0.3@uuid-types-1.0.3-HQOuja9trySCcuflACyDTJ:Data.UUID.Types.Internal.Builder
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Primitive
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Storable
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed
+                         vector-0.12.0.1@vector-0.12.0.1-692PQMDMB6pIQ1uGwefDcQ:Data.Vector.Unboxed.Base
+                         vector-instances-3.4@vector-instances-3.4-6qKuR7R2wDjElztDeslDO1:Data.Vector.Instances
+                         xml-types-0.3.6@xml-types-0.3.6-BlXpqWNn2ZGFM9gCBPuBeT:Data.XML.Types
+                         yesod-auth-1.4.19@yesod-auth-1.4.19-Lis3qGCnpJgB8Xqabl9Sxo:Yesod.Auth
+                         yesod-auth-1.4.19@yesod-auth-1.4.19-Lis3qGCnpJgB8Xqabl9Sxo:Yesod.Auth.Routes
+                         yesod-core-1.4.37@yesod-core-1.4.37-9j0qKMPCLP0L75AGd8Tz4V:Yesod.Core.Class.Handler
+                         yesod-core-1.4.37@yesod-core-1.4.37-9j0qKMPCLP0L75AGd8Tz4V:Yesod.Core.Internal.LiteApp
+                         yesod-core-1.4.37@yesod-core-1.4.37-9j0qKMPCLP0L75AGd8Tz4V:Yesod.Core.Types
+                         yesod-static-1.5.3.1@yesod-static-1.5.3.1-3fPHfGwGXLD6UjosrxUpf7:Yesod.Static
+                         zlib-0.6.1.2@zlib-0.6.1.2-7negTfm2ujt1gW4wr40MUp:Codec.Compression.Zlib.Stream
+import  -/  aeson-1.1.2.0@aeson-1.1.2.0-7ssY6fy1GxZGXxTPcOtf2k:Data.Aeson ac80dc95044b37675b3e2e0036a2e5cf
+import  -/  aeson-1.1.2.0@aeson-1.1.2.0-7ssY6fy1GxZGXxTPcOtf2k:Data.Aeson.Types.FromJSON f70746c5b1cd1a03ee098f0728e87383
+import  -/  aeson-1.1.2.0@aeson-1.1.2.0-7ssY6fy1GxZGXxTPcOtf2k:Data.Aeson.Types.Internal f040a64200abf1dfa06f5db9b9e027c1
+import  -/  aeson-1.1.2.0@aeson-1.1.2.0-7ssY6fy1GxZGXxTPcOtf2k:Data.Aeson.Types.ToJSON d8ae0f04da94d706b89336fd9d0bf43b
+import  -/  base-4.9.1.0:Data.Functor 5ab1dc703df5b482e77efb697833ca3c
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString 43e99fdac51908da414a28958688da64
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  http-types-0.9.1@http-types-0.9.1-G7E1zHPzooHCYxKqGuQmxY:Network.HTTP.Types.Status 89141eb12608ef6ae13b4ca925571920
+import  -/  Foundation 8be6b3e8c2cf1014a75747e0b7201119
+  App 466fc0ce82f8d0581f67a963a4145fe6
+  Handler df7bc498396e08778b32d50e3f2d444b
+import  -/  Import 53d3ab465a60941c33e6ce14d87124c8
+  exports: 240f663bc60500708069a41e837b846d
+import  -/  Model 34932a9c0f01dbd915d967d5a8fb9f93
+  Usuario c8cb97bc11191748636c670b22aa6410
+  UsuarioEmail f623bb3db2cdcf9596cf563a951d2857
+  UsuarioId ed95af6796f598e7664e167bb045a8e7
+  UsuarioSenha 4cc464c8a0eb29fbe6373e98a870dc3c
+  UsuarioToken b8bd6dd393f2dbe2d3eee785af82646a
+  usuarioEmail 63734367d6803d39f651605ba6dea62d
+  usuarioNome 99f92b3c4c008e40b292f95f407cef9a
+  usuarioToken 33d0481fb4f8a1f7d3a7f00ed50641db
+import  -/  persistent-2.7.0@persistent-2.7.0-EkiQsDHg8Z6Ikjfvk7Im1u:Database.Persist 0aff630e744e4e31b8f30afb6ba2be6c
+import  -/  persistent-2.7.0@persistent-2.7.0-EkiQsDHg8Z6Ikjfvk7Im1u:Database.Persist.Class.PersistEntity b1a81164694b45dd782d2c329cb2cab2
+import  -/  persistent-2.7.0@persistent-2.7.0-EkiQsDHg8Z6Ikjfvk7Im1u:Database.Persist.Class.PersistQuery f49c24dcd0623057eaedb42271af367b
+import  -/  persistent-2.7.0@persistent-2.7.0-EkiQsDHg8Z6Ikjfvk7Im1u:Database.Persist.Class.PersistStore cf3035bd99fb071645511275577dc7fe
+import  -/  persistent-postgresql-2.6.1@persistent-postgresql-2.6.1-2dvMQeNrMidL0mEJqjlR9n:Database.Persist.Postgresql 10b056d5394430454ce529b83ca42db3
+import  -/  text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text e8aa34be3dde178f567ae461e65c988b
+import  -/  text-1.2.2.2@text-1.2.2.2-9UQZjEJZQFSGMffj1Z5g00:Data.Text.Internal 9bfcbbbe07ecef48f631025a838df7da
+import  -/  yesod-auth-1.4.19@yesod-auth-1.4.19-Lis3qGCnpJgB8Xqabl9Sxo:Yesod.Auth.Util.PasswordStore 84725fde8b4302472d2e2c090278ed1c
+import  -/  yesod-core-1.4.37@yesod-core-1.4.37-9j0qKMPCLP0L75AGd8Tz4V:Yesod.Core.Handler 5eeae0813494c783beb7f9babd90b06a
+import  -/  yesod-core-1.4.37@yesod-core-1.4.37-9j0qKMPCLP0L75AGd8Tz4V:Yesod.Core.Json a974a49c1b441c1d779a78e641086a29
+import  -/  yesod-core-1.4.37@yesod-core-1.4.37-9j0qKMPCLP0L75AGd8Tz4V:Yesod.Core.Types 0b39941269d824c929136a6524eb02b4
+import  -/  yesod-persistent-1.4.2@yesod-persistent-1.4.2-4ZnSn6wFGPBBm9cdlnNUzc:Yesod.Persist.Core e6c69656dbdff229818a75455816a39b
+72b0254c53969aa89e99fe44d8fac523
+  $fFromJSONLoginn ::
+    Data.Aeson.Types.FromJSON.FromJSON Handler.Login.Loginn
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Handler.Login.Loginn
+                  Handler.Login.$fFromJSONLoginn_$cparseJSON
+                  Handler.Login.$fFromJSONLoginn_$cparseJSONList -}
+72b0254c53969aa89e99fe44d8fac523
+  $fFromJSONLoginn1 ::
+    [Data.Aeson.Types.Internal.Parser Handler.Login.Loginn]
+    -> forall (f :: * -> *) r.
+       Data.Aeson.Types.Internal.JSONPath
+       -> Data.Aeson.Types.Internal.Failure f r
+       -> Data.Aeson.Types.Internal.Success [Handler.Login.Loginn] f r
+       -> f r
+  {- Arity: 4, HasNoCafRefs, Strictness: <S,1*U><L,U><L,U><L,C(U)> -}
+094d10871472be9074a18c7cecce2a4a
+  $fFromJSONLoginn10 ::
+    Data.Aeson.Types.Internal.JSONPath
+    -> Data.Aeson.Types.Internal.Failure f r
+    -> Data.Aeson.Types.Internal.Success Data.Text.Internal.Text f r
+    -> f r
+  {- Arity: 3,
+     Unfolding: (\ @ (f :: * -> *)
+                   @ r
+                   (path :: Data.Aeson.Types.Internal.JSONPath)
+                   (kf :: Data.Aeson.Types.Internal.Failure f r)
+                   (_ks :: Data.Aeson.Types.Internal.Success
+                             Data.Text.Internal.Text f r) ->
+                 kf
+                   (GHC.List.reverse @ Data.Aeson.Types.Internal.JSONPathElement path)
+                   Handler.Login.$fFromJSONLoginn_msg1) -}
+c8c8ab04d26229986c3ea8866c5df3b9
+  $fFromJSONLoginn11 :: [GHC.Types.Char]
+  {- Unfolding: (case Data.Text.Show.$w$cshow
+                        Handler.Login.$fFromJSONLoginn8 of ww { (#,#) ww1 ww2 ->
+                 GHC.Base.++
+                   @ GHC.Types.Char
+                   (GHC.Types.: @ GHC.Types.Char ww1 ww2)
+                   Handler.Login.$fFromJSONLoginn7 }) -}
+df33d0af812f8842874ae70d3f1f8578
+  $fFromJSONLoginn12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Loginn"#) -}
+d11e33c2edc0b138a0aa0b31a047ec18
+  $fFromJSONLoginn2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "[a]"#) -}
+72b0254c53969aa89e99fe44d8fac523
+  $fFromJSONLoginn3 ::
+    Data.Aeson.Types.Internal.Object
+    -> Data.Aeson.Types.Internal.Parser Handler.Login.Loginn
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (v :: Data.Aeson.Types.Internal.Object) ->
+                 let {
+                   m :: Data.Aeson.Types.Internal.Parser Data.Text.Internal.Text
+                   = case Handler.Login.$fFromJSONLoginn8 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                     case Data.Aeson.Types.FromJSON.$w$slookup
+                            @ Data.Aeson.Types.Internal.Value
+                            ww1
+                            ww2
+                            ww3
+                            v of wild {
+                       GHC.Base.Nothing
+                       -> Handler.Login.$fFromJSONLoginn10
+                            `cast`
+                          (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                                    <Data.Text.Internal.Text>_R))
+                       GHC.Base.Just v1
+                       -> let {
+                            p :: Data.Aeson.Types.Internal.Parser Data.Text.Internal.Text
+                            = case v1 of wild1 {
+                                DEFAULT
+                                -> Data.Aeson.Types.FromJSON.typeMismatch
+                                     @ Data.Text.Internal.Text
+                                     Handler.Login.$fFromJSONLoginn9
+                                     wild1
+                                Data.Aeson.Types.Internal.String txt
+                                -> (\ @ (f :: * -> *)
+                                      @ r
+                                      (_path :: Data.Aeson.Types.Internal.JSONPath)
+                                      (_kf :: Data.Aeson.Types.Internal.Failure f r)
+                                      (ks :: Data.Aeson.Types.Internal.Success
+                                               Data.Text.Internal.Text f r) ->
+                                    ks txt)
+                                     `cast`
+                                   (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                                             <Data.Text.Internal.Text>_R)) }
+                          } in
+                          (\ @ (f :: * -> *)
+                             @ r
+                             (path :: Data.Aeson.Types.Internal.JSONPath)
+                             (kf :: Data.Aeson.Types.Internal.Failure f r)
+                             (ks :: Data.Aeson.Types.Internal.Success
+                                      Data.Text.Internal.Text f r) ->
+                           p `cast`
+                           (Data.Aeson.Types.Internal.N:Parser[0] <Data.Text.Internal.Text>_R)
+                             @ f
+                             @ r
+                             (GHC.Types.:
+                                @ Data.Aeson.Types.Internal.JSONPathElement
+                                Handler.Login.$fFromJSONLoginn_pathElem1
+                                path)
+                             kf
+                             ks)
+                            `cast`
+                          (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                                    <Data.Text.Internal.Text>_R)) } }
+                 } in
+                 let {
+                   e :: Data.Aeson.Types.Internal.Parser Data.Text.Internal.Text
+                   = case Handler.Login.$fFromJSONLoginn4 of ww { Data.Text.Internal.Text ww1 ww2 ww3 ->
+                     case Data.Aeson.Types.FromJSON.$w$slookup
+                            @ Data.Aeson.Types.Internal.Value
+                            ww1
+                            ww2
+                            ww3
+                            v of wild {
+                       GHC.Base.Nothing
+                       -> Handler.Login.$fFromJSONLoginn5
+                            `cast`
+                          (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                                    <Data.Text.Internal.Text>_R))
+                       GHC.Base.Just v1
+                       -> let {
+                            p :: Data.Aeson.Types.Internal.Parser Data.Text.Internal.Text
+                            = case v1 of wild1 {
+                                DEFAULT
+                                -> Data.Aeson.Types.FromJSON.typeMismatch
+                                     @ Data.Text.Internal.Text
+                                     Handler.Login.$fFromJSONLoginn9
+                                     wild1
+                                Data.Aeson.Types.Internal.String txt
+                                -> (\ @ (f :: * -> *)
+                                      @ r
+                                      (_path :: Data.Aeson.Types.Internal.JSONPath)
+                                      (_kf :: Data.Aeson.Types.Internal.Failure f r)
+                                      (ks :: Data.Aeson.Types.Internal.Success
+                                               Data.Text.Internal.Text f r) ->
+                                    ks txt)
+                                     `cast`
+                                   (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                                             <Data.Text.Internal.Text>_R)) }
+                          } in
+                          (\ @ (f :: * -> *)
+                             @ r
+                             (path :: Data.Aeson.Types.Internal.JSONPath)
+                             (kf :: Data.Aeson.Types.Internal.Failure f r)
+                             (ks :: Data.Aeson.Types.Internal.Success
+                                      Data.Text.Internal.Text f r) ->
+                           p `cast`
+                           (Data.Aeson.Types.Internal.N:Parser[0] <Data.Text.Internal.Text>_R)
+                             @ f
+                             @ r
+                             (GHC.Types.:
+                                @ Data.Aeson.Types.Internal.JSONPathElement
+                                Handler.Login.$fFromJSONLoginn_pathElem
+                                path)
+                             kf
+                             ks)
+                            `cast`
+                          (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                                    <Data.Text.Internal.Text>_R)) } }
+                 } in
+                 (\ @ (f :: * -> *)
+                    @ r
+                    (path :: Data.Aeson.Types.Internal.JSONPath)
+                    (kf :: Data.Aeson.Types.Internal.Failure f r)
+                    (ks :: Data.Aeson.Types.Internal.Success
+                             Handler.Login.Loginn f r) ->
+                  m `cast`
+                  (Data.Aeson.Types.Internal.N:Parser[0] <Data.Text.Internal.Text>_R)
+                    @ f
+                    @ r
+                    path
+                    kf
+                    (\ (a1 :: Data.Text.Internal.Text) ->
+                     e `cast`
+                     (Data.Aeson.Types.Internal.N:Parser[0] <Data.Text.Internal.Text>_R)
+                       @ f
+                       @ r
+                       path
+                       kf
+                       (\ (a2 :: Data.Text.Internal.Text) ->
+                        ks (Handler.Login.Loginn a1 a2))))
+                   `cast`
+                 (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                           <Handler.Login.Loginn>_R))) -}
+79e69f3646feaf8b3ea2e1bf8fd064ec
+  $fFromJSONLoginn4 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "senha"#) -}
+c56dfdc7122f135aaf79a16dabb941da
+  $fFromJSONLoginn5 ::
+    Data.Aeson.Types.Internal.JSONPath
+    -> Data.Aeson.Types.Internal.Failure f r
+    -> Data.Aeson.Types.Internal.Success Data.Text.Internal.Text f r
+    -> f r
+  {- Arity: 3,
+     Unfolding: (\ @ (f :: * -> *)
+                   @ r
+                   (path :: Data.Aeson.Types.Internal.JSONPath)
+                   (kf :: Data.Aeson.Types.Internal.Failure f r)
+                   (_ks :: Data.Aeson.Types.Internal.Success
+                             Data.Text.Internal.Text f r) ->
+                 kf
+                   (GHC.List.reverse @ Data.Aeson.Types.Internal.JSONPathElement path)
+                   Handler.Login.$fFromJSONLoginn_msg3) -}
+7c4f26aacb18d49b7f345314b9cd5538
+  $fFromJSONLoginn6 :: [GHC.Types.Char]
+  {- Unfolding: (case Data.Text.Show.$w$cshow
+                        Handler.Login.$fFromJSONLoginn4 of ww { (#,#) ww1 ww2 ->
+                 GHC.Base.++
+                   @ GHC.Types.Char
+                   (GHC.Types.: @ GHC.Types.Char ww1 ww2)
+                   Handler.Login.$fFromJSONLoginn7 }) -}
+6bf5aa7bc750428ee7edb29e70355fb8
+  $fFromJSONLoginn7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# " not present"#) -}
+dbaf78aeb0a283c2457bc0584deca909
+  $fFromJSONLoginn8 :: Data.Text.Internal.Text
+  {- Unfolding: (Data.Text.Show.unpackCString# "email"#) -}
+41bf87d73c78518874c1f7800d07c9ef
+  $fFromJSONLoginn9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Text"#) -}
+72b0254c53969aa89e99fe44d8fac523
+  $fFromJSONLoginn_$cparseJSON ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser Handler.Login.Loginn
+  {- Arity: 1,
+     Unfolding: (Data.Aeson.Types.FromJSON.withObject
+                   @ Handler.Login.Loginn
+                   Handler.Login.$fFromJSONLoginn12
+                   Handler.Login.$fFromJSONLoginn3) -}
+72b0254c53969aa89e99fe44d8fac523
+  $fFromJSONLoginn_$cparseJSONList ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser [Handler.Login.Loginn]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: Data.Aeson.Types.Internal.Value) ->
+                 case ds of wild {
+                   DEFAULT
+                   -> Data.Aeson.Types.FromJSON.typeMismatch
+                        @ [Handler.Login.Loginn]
+                        Handler.Login.$fFromJSONLoginn2
+                        wild
+                   Data.Aeson.Types.Internal.Array a1
+                   -> case a1 of wild1 { Data.Vector.Vector dt dt1 dt2 ->
+                      (Handler.Login.$fFromJSONLoginn1
+                         (letrec {
+                            $wgo :: GHC.Prim.Int# -> [Data.Aeson.Types.Internal.Value]
+                              {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+                            = \ (ww :: GHC.Prim.Int#) ->
+                              case GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.>=# ww dt1) of wild2 {
+                                GHC.Types.False
+                                -> case GHC.Prim.indexArray#
+                                          @ Data.Aeson.Types.Internal.Value
+                                          dt2
+                                          (GHC.Prim.+# dt ww) of ds1 { Unit# ipv ->
+                                   GHC.Types.:
+                                     @ Data.Aeson.Types.Internal.Value
+                                     ipv
+                                     ($wgo (GHC.Prim.+# ww 1#)) }
+                                GHC.Types.True -> GHC.Types.[] @ Data.Aeson.Types.Internal.Value }
+                          } in
+                          Handler.Login.$fFromJSONLoginn_go 0# ($wgo 0#)))
+                        `cast`
+                      (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                                <[Handler.Login.Loginn]>_R)) } }) -}
+72b0254c53969aa89e99fe44d8fac523
+  $fFromJSONLoginn_go ::
+    GHC.Prim.Int#
+    -> [Data.Aeson.Types.Internal.Value]
+    -> [Data.Aeson.Types.Internal.Parser Handler.Login.Loginn]
+  {- Arity: 2, Strictness: <L,U><S,1*U> -}
+3bdd7917d3b8c7f225f35cfa0c1fd919
+  $fFromJSONLoginn_msg1 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   "key "#
+                   Handler.Login.$fFromJSONLoginn11) -}
+85a15f284b526b4ed6f34c25197c32aa
+  $fFromJSONLoginn_msg3 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   "key "#
+                   Handler.Login.$fFromJSONLoginn6) -}
+b369726ae644a525b4cfc8a7eeb447d7
+  $fFromJSONLoginn_pathElem ::
+    Data.Aeson.Types.Internal.JSONPathElement
+  {- Unfolding: (Data.Aeson.Types.Internal.Key
+                   Handler.Login.$fFromJSONLoginn4) -}
+afbc5ad36aa736002ab980ddf614f58a
+  $fFromJSONLoginn_pathElem1 ::
+    Data.Aeson.Types.Internal.JSONPathElement
+  {- Unfolding: (Data.Aeson.Types.Internal.Key
+                   Handler.Login.$fFromJSONLoginn8) -}
+d12018103489d4bebbd34842ff01f0d4
+  $s$WUsuarioEmail2 ::
+    Data.Text.Internal.Text GHC.Types.~~ Data.Text.Internal.Text
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Eq#
+                   @ *
+                   @ *
+                   @ Data.Text.Internal.Text
+                   @ Data.Text.Internal.Text
+                   @~ <Data.Text.Internal.Text>_N) -}
+57e879c4d56bd4378b000ecc226a17f0
+  $s$WUsuarioToken_$d~~ ::
+    GHC.Base.Maybe Data.Text.Internal.Text
+    GHC.Types.~~ GHC.Base.Maybe Data.Text.Internal.Text
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Eq#
+                   @ *
+                   @ *
+                   @ (GHC.Base.Maybe Data.Text.Internal.Text)
+                   @ (GHC.Base.Maybe Data.Text.Internal.Text)
+                   @~ <GHC.Base.Maybe Data.Text.Internal.Text>_N) -}
+ef7a9f76709efc0ca5135bf825924496
+  $s$fPersistFieldMaybe ::
+    Database.Persist.Class.PersistField.PersistField
+      (GHC.Base.Maybe Data.Text.Internal.Text)
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Base.Maybe Data.Text.Internal.Text)
+                  Handler.Login.$s$fPersistFieldMaybe_$s$fPersistFieldMaybe_$ctoPersistValue
+                  (Database.Persist.Class.PersistField.$fPersistFieldMaybe_$cfromPersistValue
+                     @ Data.Text.Internal.Text
+                     Database.Persist.Class.PersistField.$fPersistFieldText0) -}
+978ad8e0415feac847f857f8da713ce8
+  $s$fPersistFieldMaybe_$s$fPersistFieldMaybe_$ctoPersistValue ::
+    GHC.Base.Maybe Data.Text.Internal.Text
+    -> Database.Persist.Types.Base.PersistValue
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: GHC.Base.Maybe Data.Text.Internal.Text) ->
+                 case ds of wild {
+                   GHC.Base.Nothing -> Database.Persist.Types.Base.PersistNull
+                   GHC.Base.Just a1
+                   -> Database.Persist.Types.Base.PersistText a1 }) -}
+6402621561cb66e5e3823d3990258446
+  $tc'Loginn :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1589399940635376146##
+                   10043855786672912591##
+                   Handler.Login.$trModule
+                   Handler.Login.$tc'Loginn1) -}
+d41bb97f27e2dcb807154d2eccba42b4
+  $tc'Loginn1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Loginn"#) -}
+67cddfdb4c9846e8f96a6402c356df40
+  $tcLoginn :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9950665894719499175##
+                   8039608519502413969##
+                   Handler.Login.$trModule
+                   Handler.Login.$tcLoginn1) -}
+762f09aae789ce066b404ff7d22abf0c
+  $tcLoginn1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Loginn"#) -}
+9beba60868fa7a1d795609971ffa9701
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Handler.Login.$trModule2
+                   Handler.Login.$trModule1) -}
+890fe603cacad1567f0e84c94c228fa4
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Handler.Login"#) -}
+7261b5c16e48856e45c8e66593cab272
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "imobiliaria-0.0.0-HqXHZMLZhTlJ6HZ3NKR0jm"#) -}
+72b0254c53969aa89e99fe44d8fac523
+  data Loginn
+    = Loginn {email :: Data.Text.Internal.Text,
+              senha :: Data.Text.Internal.Text}
+9d70d079e2e0ddc06ebfaab62db128eb
+  autenticar ::
+    Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> Yesod.Core.Types.HandlerT
+         Foundation.App
+         GHC.Types.IO
+         (GHC.Base.Maybe
+            (Database.Persist.Class.PersistEntity.Entity Model.Usuario))
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Handler.Login.autenticar1
+                  `cast`
+                (<Data.Text.Internal.Text>_R
+                 ->_R <Data.Text.Internal.Text>_R
+                 ->_R Trans
+                          (<Yesod.Core.Types.HandlerData
+                              Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
+                           ->_R Sym (GHC.Types.N:IO[0]
+                                         <GHC.Base.Maybe
+                                            (Database.Persist.Class.PersistEntity.Entity
+                                               Model.Usuario)>_R))
+                          (Sym (Yesod.Core.Types.N:HandlerT[0]
+                                    <Foundation.App>_N
+                                    <GHC.Types.IO>_N
+                                    <GHC.Base.Maybe
+                                       (Database.Persist.Class.PersistEntity.Entity
+                                          Model.Usuario)>_N))) -}
+3961a28c82b207e01ac53a0c9bd28dad
+  autenticar1 ::
+    Data.Text.Internal.Text
+    -> Data.Text.Internal.Text
+    -> Yesod.Core.Types.HandlerData
+         Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          GHC.Base.Maybe
+            (Database.Persist.Class.PersistEntity.Entity Model.Usuario) #)
+  {- Arity: 2, Strictness: <L,U><L,U>,
+     Unfolding: (\ (email1 :: Data.Text.Internal.Text)
+                   (senha1 :: Data.Text.Internal.Text) ->
+                 Foundation.$fYesodPersistApp1
+                   @ (GHC.Base.Maybe
+                        (Database.Persist.Class.PersistEntity.Entity Model.Usuario))
+                   (Database.Persist.Sql.Orphan.PersistQuery.$fPersistQueryReadSqlBackend_$cselectFirst
+                      @ (Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO)
+                      @ Model.Usuario
+                      (Yesod.Auth.$dmgetAuthEntity_$s$fMonadIOHandlerT @ Foundation.App)
+                      Handler.Login.autenticar4
+                        `cast`
+                      (GHC.Classes.(%,%)
+                         <Database.Persist.Class.PersistEntity.PersistEntity
+                            Model.Usuario>_N
+                         ((Data.Type.Equality.~)
+                            <*>_N
+                            (Sym (Model.D:R:PersistEntityBackendUsuario[0]))
+                            (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R
+                      (GHC.Types.:
+                         @ (Database.Persist.Class.PersistEntity.Filter Model.Usuario)
+                         (Database.Persist.Class.PersistEntity.Filter
+                            @ Model.Usuario
+                            @ Data.Text.Internal.Text
+                            Database.Persist.Class.PersistField.$fPersistFieldText0
+                            Handler.Login.autenticar3
+                              `cast`
+                            (Sym (Model.D:R:EntityFieldUsuariotyp0[0]) <Data.Text.Internal.Text>_N)
+                            (Data.Either.Left
+                               @ Data.Text.Internal.Text
+                               @ [Data.Text.Internal.Text]
+                               email1)
+                            Database.Persist.Types.Base.Eq)
+                         (GHC.Types.:
+                            @ (Database.Persist.Class.PersistEntity.Filter Model.Usuario)
+                            (Database.Persist.Class.PersistEntity.Filter
+                               @ Model.Usuario
+                               @ Data.Text.Internal.Text
+                               Database.Persist.Class.PersistField.$fPersistFieldText0
+                               Handler.Login.autenticar2
+                                 `cast`
+                               (Sym (Model.D:R:EntityFieldUsuariotyp0[0]) <Data.Text.Internal.Text>_N)
+                               (Data.Either.Left
+                                  @ Data.Text.Internal.Text
+                                  @ [Data.Text.Internal.Text]
+                                  senha1)
+                               Database.Persist.Types.Base.Eq)
+                            (GHC.Types.[]
+                               @ (Database.Persist.Class.PersistEntity.Filter Model.Usuario))))
+                      (GHC.Types.[]
+                         @ (Database.Persist.Class.PersistEntity.SelectOpt Model.Usuario)))
+                     `cast`
+                   (Control.Monad.Trans.Reader.ReaderT
+                      <*>_N
+                      (Sub (Sym (Foundation.D:R:YesodPersistBackendApp[0])))
+                      <Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO>_R
+                      <GHC.Base.Maybe
+                         (Database.Persist.Class.PersistEntity.Entity
+                            Model.Usuario)>_N)_R) -}
+f669bf85aae8e072430f7aae737106bc
+  autenticar2 ::
+    Model.R:EntityFieldUsuariotyp Data.Text.Internal.Text
+  {- HasNoCafRefs, Strictness: m6,
+     Unfolding: (Model.UsuarioSenha
+                   @ Data.Text.Internal.Text
+                   Handler.Login.$s$WUsuarioEmail2
+                     `cast`
+                   (Sym (Data.Type.Equality.N:~[0]
+                             <*>_N) <Data.Text.Internal.Text>_N <Data.Text.Internal.Text>_N)) -}
+d569490b4221c3817afde42b186ce0ce
+  autenticar3 ::
+    Model.R:EntityFieldUsuariotyp Data.Text.Internal.Text
+  {- HasNoCafRefs, Strictness: m3,
+     Unfolding: (Model.UsuarioEmail
+                   @ Data.Text.Internal.Text
+                   Handler.Login.$s$WUsuarioEmail2
+                     `cast`
+                   (Sym (Data.Type.Equality.N:~[0]
+                             <*>_N) <Data.Text.Internal.Text>_N <Data.Text.Internal.Text>_N)) -}
+85b27e3262659f8fe373e2824fce1c11
+  autenticar4 ::
+    (Database.Persist.Class.PersistEntity.PersistEntity Model.Usuario,
+     Database.Persist.Sql.Types.Internal.SqlBackend
+     Data.Type.Equality.~ Database.Persist.Sql.Types.Internal.SqlBackend)
+  {- Strictness: m,
+     Unfolding: ((Model.$fPersistEntityUsuario,
+                  Handler.Login.autenticar5
+                    `cast`
+                  (Sym (Data.Type.Equality.N:~[0]
+                            <*>_N) <Database.Persist.Sql.Types.Internal.SqlBackend>_N <Database.Persist.Sql.Types.Internal.SqlBackend>_N))) -}
+812a939ca65225eb0c421804aebd6dc2
+  autenticar5 ::
+    Database.Persist.Sql.Types.Internal.SqlBackend
+    GHC.Types.~~ Database.Persist.Sql.Types.Internal.SqlBackend
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Eq#
+                   @ *
+                   @ *
+                   @ Database.Persist.Sql.Types.Internal.SqlBackend
+                   @ Database.Persist.Sql.Types.Internal.SqlBackend
+                   @~ <Database.Persist.Sql.Types.Internal.SqlBackend>_N) -}
+612a095e451341617f43341a64bc0d98
+  email :: Handler.Login.Loginn -> Data.Text.Internal.Text
+  RecSel Left Handler.Login.Loginn
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U(U,U,U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Handler.Login.Loginn) ->
+                 case ds of wild { Handler.Login.Loginn ds1 ds2 -> ds1 }) -}
+f53f84d064c74b76112192fdc894101c
+  geraToken ::
+    Data.ByteString.Internal.ByteString
+    -> GHC.Types.Int
+    -> GHC.Types.IO Data.ByteString.Internal.ByteString
+  {- Arity: 3, Strictness: <L,1*U(U,U,U,U)><L,U(U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Yesod.Auth.Util.PasswordStore.makePassword1
+                  `cast`
+                (<Data.ByteString.Internal.ByteString>_R
+                 ->_R <GHC.Types.Int>_R
+                 ->_R Sym (GHC.Types.N:IO[0]
+                               <Data.ByteString.Internal.ByteString>_R)) -}
+4f843d8ef594adf70512923d7519868e
+  postFinalSessaoR ::
+    Model.UsuarioId
+    -> Foundation.Handler Data.Aeson.Types.Internal.Value
+  {- Arity: 3, Strictness: <L,U><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Handler.Login.postFinalSessaoR1
+                  `cast`
+                (<Model.UsuarioId>_R
+                 ->_R Trans
+                          (<Yesod.Core.Types.HandlerData
+                              Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
+                           ->_R Sym (GHC.Types.N:IO[0] <Data.Aeson.Types.Internal.Value>_R))
+                          (Sym (Yesod.Core.Types.N:HandlerT[0]
+                                    <Foundation.App>_N
+                                    <GHC.Types.IO>_N
+                                    <Data.Aeson.Types.Internal.Value>_N))) -}
+692a342a73e4f99e765b65e1a100d762
+  postFinalSessaoR1 ::
+    Model.UsuarioId
+    -> Yesod.Core.Types.HandlerData
+         Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Aeson.Types.Internal.Value #)
+  {- Arity: 3, Strictness: <L,U><L,U><S,U>,
+     Unfolding: (\ (usuarioId :: Model.UsuarioId)
+                   (eta :: Yesod.Core.Types.HandlerData
+                             Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO))
+                   (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Foundation.$fYesodPersistApp1
+                        @ ()
+                        (Database.Persist.Sql.Orphan.PersistStore.$fPersistStoreWriteSqlBackend_$cupdate
+                           @ (Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO)
+                           @ Model.Usuario
+                           (Yesod.Auth.$dmgetAuthEntity_$s$fMonadIOHandlerT @ Foundation.App)
+                           Handler.Login.autenticar4
+                             `cast`
+                           (GHC.Classes.(%,%)
+                              <Database.Persist.Class.PersistEntity.PersistEntity
+                                 Model.Usuario>_N
+                              ((Data.Type.Equality.~)
+                                 <*>_N
+                                 (Sym (Model.D:R:PersistEntityBackendUsuario[0]))
+                                 (Sym (Database.Persist.Sql.Types.Internal.D:R:BaseBackendSqlBackend[0])))_N)_R
+                           usuarioId
+                           Handler.Login.postFinalSessaoR4)
+                          `cast`
+                        (Control.Monad.Trans.Reader.ReaderT
+                           <*>_N
+                           (Sub (Sym (Foundation.D:R:YesodPersistBackendApp[0])))
+                           <Yesod.Core.Types.HandlerT Foundation.App GHC.Types.IO>_R
+                           <()>_N)_R
+                        eta
+                        eta1 of ds1 { (#,#) ipv ipv1 ->
+                 GHC.Prim.raiseIO#
+                   @ GHC.Exception.SomeException
+                   @ Data.Aeson.Types.Internal.Value
+                   Handler.Login.postFinalSessaoR2
+                   ipv }) -}
+2f50bf71fc1ba0b6d7b7a986d7a25f90
+  postFinalSessaoR2 :: GHC.Exception.SomeException
+  {- Unfolding: (Yesod.Core.Types.$fExceptionHandlerContents_$ctoException
+                   Handler.Login.postFinalSessaoR3) -}
+d2b56c54570b36fb7a096edb965af4e6
+  postFinalSessaoR3 :: Yesod.Core.Types.HandlerContents
+  {- Unfolding: (case Yesod.Core.Content.typeJson of dt { Data.ByteString.Internal.PS ipv ipv1 ipv2 ipv3 ->
+                 case (Data.Aeson.Encoding.Builder.encodeToBuilder
+                         Data.Aeson.Types.Internal.emptyObject)
+                        `cast`
+                      (Data.ByteString.Builder.Internal.N:Builder[0]) of nt { DEFAULT ->
+                 Yesod.Core.Types.HCContent
+                   Network.HTTP.Types.Status.status204
+                   (Yesod.Core.Types.TypedContent
+                      dt
+                      (Yesod.Core.Types.ContentBuilder
+                         nt `cast` (Sym (Data.ByteString.Builder.Internal.N:Builder[0]))
+                         (GHC.Base.Nothing @ GHC.Types.Int))) } }) -}
+efa90a50b8b62caecc9038e4ba9868e3
+  postFinalSessaoR4 ::
+    [Database.Persist.Class.PersistEntity.Update Model.Usuario]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Database.Persist.Class.PersistEntity.Update Model.Usuario)
+                   Handler.Login.postFinalSessaoR5
+                   (GHC.Types.[]
+                      @ (Database.Persist.Class.PersistEntity.Update Model.Usuario))) -}
+de8cd847f40ea2e2fd99dba5198f3790
+  postFinalSessaoR5 ::
+    Database.Persist.Class.PersistEntity.Update Model.Usuario
+  {- Unfolding: (Database.Persist.Class.PersistEntity.Update
+                   @ Model.Usuario
+                   @ (GHC.Base.Maybe Data.Text.Internal.Text)
+                   Handler.Login.$s$fPersistFieldMaybe
+                   Handler.Login.postFinalSessaoR6
+                     `cast`
+                   (Sym (Model.D:R:EntityFieldUsuariotyp0[0]) <GHC.Base.Maybe
+                                                                 Data.Text.Internal.Text>_N)
+                   (GHC.Base.Nothing @ Data.Text.Internal.Text)
+                   Database.Persist.Types.Base.Assign) -}
+249d90711911234f19259226948fd2e8
+  postFinalSessaoR6 ::
+    Model.R:EntityFieldUsuariotyp
+      (GHC.Base.Maybe Data.Text.Internal.Text)
+  {- HasNoCafRefs, Strictness: m7,
+     Unfolding: (Model.UsuarioToken
+                   @ (GHC.Base.Maybe Data.Text.Internal.Text)
+                   Handler.Login.$s$WUsuarioToken_$d~~
+                     `cast`
+                   (Sym (Data.Type.Equality.N:~[0] <*>_N) <GHC.Base.Maybe
+                                                             Data.Text.Internal.Text>_N <GHC.Base.Maybe
+                                                                                           Data.Text.Internal.Text>_N)) -}
+e893ef5cfe72afe70423f5a362ccd6b1
+  postIniciarSessaoR ::
+    Foundation.Handler Data.Aeson.Types.Internal.Value
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Handler.Login.postIniciarSessaoR1
+                  `cast`
+                (Trans
+                     (<Yesod.Core.Types.HandlerData
+                         Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO)>_R
+                      ->_R Sym (GHC.Types.N:IO[0] <Data.Aeson.Types.Internal.Value>_R))
+                     (Sym (Yesod.Core.Types.N:HandlerT[0]
+                               <Foundation.App>_N
+                               <GHC.Types.IO>_N
+                               <Data.Aeson.Types.Internal.Value>_N))) -}
+b8f1230f130d21bde619b033293e0a5f
+  postIniciarSessaoR1 ::
+    Yesod.Core.Types.HandlerData
+      Foundation.App (Yesod.Core.Types.MonadRoute GHC.Types.IO)
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Aeson.Types.Internal.Value #)
+  {- Arity: 2, Strictness: <L,U><S,U> -}
+38ab704f9f409bdbd404d7639580935f
+  senha :: Handler.Login.Loginn -> Data.Text.Internal.Text
+  RecSel Left Handler.Login.Loginn
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U(U,U,U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Handler.Login.Loginn) ->
+                 case ds of wild { Handler.Login.Loginn ds1 ds2 -> ds2 }) -}
+instance Data.Aeson.Types.FromJSON.FromJSON [Handler.Login.Loginn]
+  = Handler.Login.$fFromJSONLoginn
+"SPEC/Handler.Login $fPersistFieldMaybe @ Text" [ALWAYS] forall ($dPersistField :: Database.Persist.Class.PersistField.PersistField
+                                                                                     Data.Text.Internal.Text)
+  Database.Persist.Class.PersistField.$fPersistFieldMaybe @ Data.Text.Internal.Text
+                                                          $dPersistField
+  = Handler.Login.$s$fPersistFieldMaybe
+"SPEC/Handler.Login $fPersistFieldMaybe_$ctoPersistValue @ Text" [ALWAYS] forall ($dPersistField :: Database.Persist.Class.PersistField.PersistField
+                                                                                                      Data.Text.Internal.Text)
+  Database.Persist.Class.PersistField.$fPersistFieldMaybe_$ctoPersistValue @ Data.Text.Internal.Text
+                                                                           $dPersistField
+  = Handler.Login.$s$fPersistFieldMaybe_$s$fPersistFieldMaybe_$ctoPersistValue
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

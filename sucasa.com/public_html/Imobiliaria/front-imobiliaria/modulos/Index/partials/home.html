@@ -1,0 +1,78 @@
+<script src="js/init.js"></script>  
+<div ng-controller="homeController">    
+    <div>
+        <!-- <div class="menuBar"></div> -->
+        <nav  class="grey lighten-5" role="navigation">
+            <div ng-if="!logado" class="credentialOptionDiv">
+                <label><a ui-sref="credencial" class="credentialOption">Entrar</a></label>
+                <label>ou</label>
+                <label><a ui-sref="credencial" class="credentialOption">Cadastre-se</a></label>
+            </div>
+            <div ng-if="logado" class="credentialOptionDiv text-ellipsis" style="width: 150px;" >
+                
+                <label style="color: #8e24aa; font-size: 1.2rem;font-weight: 600;"><i class="fa fa-user-o" aria-hidden="true"></i>{{dadosUsuario.nomeBarra}}</label>
+                <label ng-click="deslogar()" style="cursor:pointer;color: #0e63c4; font-size: 0.8rem;font-weight: 600;margin-left:10px;"> Sair</label>
+            </div>
+            <div class="nav-wrapper container">
+                
+                <a id="logo-container" ui-sref="home" class="brand-logo"><img style="width:110px;" src="images/logo9.png"></img></a>
+                <ul class="right hide-on-med-and-down"> 
+                    <li><a ui-sref="home"  style="color:#5e5d5d; border-right: #e6e6e6 1px solid;"><i class="fa fa-home"  aria-hidden="true"></i> &nbsp;HOME</a></li>
+                    <li ng-if="logado"><a ui-sref="meusanuncios"  style="color:#5e5d5d;border-right: #e6e6e6 1px solid;"><i class="fa fa-newspaper-o" aria-hidden="true"></i> &nbsp;MEUS ANÚNCIOS</a></li>
+                    <li><a ui-sref="busca"  style="color:#5e5d5d;"><i class="fa fa-search" aria-hidden="true"></i> &nbsp;PROCURAR IMÓVEIS</a></li>
+                </ul>
+
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a ui-sref="home" style="color:#5e5d5d;">Início</a></li>
+                    <li><a ui-sref="cadastro" style="color:#5e5d5d;">Cadastre-se</a></li>
+                    <li><a ui-sref="login"  style="color:#5e5d5d;">Entrar</a></li>
+
+                </ul>
+                <a href="" data-activates="nav-mobile" style="color:#5e5d5d;" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
+    <div class="section backHome">
+        <div class="container">    
+            <div class="row center " style="margin-top:50px;">
+                <label class="sloganHome">Aqui você encontra o lar dos seus sonhos</label>
+                <!-- <label class="sloganHome">O seu futuro lar está aqui</label> -->
+            </div>
+            <div class="row">
+                <div class="optionMenuHome col s12 m3 offset-m2 center card-panel hoverable backWhite " ng-click="buscarImoveis('2')" >
+                    <i class="material-icons">home</i> <label>Aluguel</label>
+                </div>
+                <div class="col s12 m3 offset-m2 center card-panel hoverable backWhite optionMenuHome" ng-click="buscarImoveis('1')">
+                    <i class="material-icons">home</i> <label>Comprar</label>
+                </div>
+            </div>       
+        </div>
+    </div>
+    <div class="container"> 
+        <div class="row center espacoHome ofertaText">
+            Ofertas Recentes
+        </div>
+        <div class="row espacoHome" ng-repeat="anuncio in listaAnuncios" >
+            <div class="col m12 card-panel hoverable backWhite no-padding imOffer">
+                <div class="col s12 l4 xl4 imageOffer" style="background-image: url('{{'http://localhost:8080/static/img/'+anuncio[0].id+'/1'}}');" ng-click="detalhesAnuncio(anuncio[0].id)"></div>
+                <div class="col s12 l4 xl3 no-padding ">
+                    <div ng-click="detalhesAnuncio(anuncio[0].id)" class="subTitleTipo changeColorOfferSub">{{anuncio[0].tipoproposta}}</div>
+                    <div ng-click="detalhesAnuncio(anuncio[0].id)" class="subTitlePreco changeColorOfferSub">R$ {{numberToReal(anuncio[0].valor)}}</div>
+                </div>
+                <div class="col s12 l4 xl5 offerText">
+                    <div class="offerTitleClick" ng-click="detalhesAnuncio(anuncio[0].id)">
+                        <label class="offerTitle changeColorOffer">{{anuncio[0].bairro}}</label>
+                        <label class="offerTitle changeColorOffer">{{anuncio[0].logradouro}} - {{anuncio[0].cidade}} - {{anuncio[0].estado}}</label>
+                    </div>
+                    <div class="offerDesc"><label>{{anuncio[0].descricao}} </label></div>
+                    <label class="plusOffer" ng-click="detalhesAnuncio(anuncio[0].id)">Ver mais</label>
+                </div>
+            </div>
+
+            
+            
+        </div>
+    </div>
+
+</div>
+<div id="footer"></div>

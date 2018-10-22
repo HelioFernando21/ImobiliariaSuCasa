@@ -1,0 +1,53 @@
+Usuario json
+    nome Text
+    email Text sqltype=varchar(40)
+    dtNascimento Day 
+    telefone Text 
+    senha Text
+    UniqueEmail email
+    token Text Maybe
+      deriving Show
+
+Oferta json
+    descricao Text
+    dia Day 
+    logradouro Text
+    bairro Text
+    cidade Text
+    estado Text
+    valor Double 
+    espaco Double
+    numeroquartos Text sqltype=varchar(2)
+    vagasestacionamento Text sqltype=varchar(2)
+    anunciante UsuarioId
+    tipoproposta Text
+    tipomoradia Text
+       deriving Show
+
+Foto json
+    proposta OfertaId
+      deriving Show
+
+Propostatype json
+    descricao Text
+      deriving Show
+
+Moradiatype json
+    descricao Text
+      deriving Show
+
+Regiao json
+    nome Text sqltype=varchar(20) 
+       deriving Show
+
+Municipio json
+    nome Text sqltype=varchar(50)
+    uf   Text sqltype=char(2)
+       deriving Show
+
+Estado json
+    nome Text sqltype=varchar(50)
+    uf   Text sqltype=char(2)
+    regiao RegiaoId
+       deriving Show
+

@@ -1,0 +1,153 @@
+<script src="js/init.js"></script>  
+<div ng-controller="anuncios-crudController">    
+    <div>
+        <!-- <div class="menuBar"></div> -->
+        <nav  class="grey lighten-5" role="navigation">
+            <div ng-if="!logado" class="credentialOptionDiv">
+                <label><a ui-sref="credencial" class="credentialOption">Entrar</a></label>
+                <label>ou</label>
+                <label><a ui-sref="credencial" class="credentialOption">Cadastre-se</a></label>
+            </div>
+            <div ng-if="logado" class="credentialOptionDiv text-ellipsis" style="width: 150px;" >
+                
+                <label style="color: #8e24aa; font-size: 1.2rem;font-weight: 600;"><i class="fa fa-user-o" aria-hidden="true"></i>{{dadosUsuario.nomeBarra}}</label>
+                <label ng-click="deslogar()" style="cursor:pointer;color: #0e63c4; font-size: 0.8rem;font-weight: 600;margin-left:10px;"> Sair</label>
+            </div>
+            <div class="nav-wrapper container">
+                
+                <a id="logo-container" ui-sref="home" class="brand-logo"><img style="width:110px;" src="images/logo9.png"></img></a>
+                <ul class="right hide-on-med-and-down"> 
+                    <li><a ui-sref="home"  style="color:#5e5d5d; border-right: #e6e6e6 1px solid;"><i class="fa fa-home"  aria-hidden="true"></i> &nbsp;HOME</a></li>
+                    <li ng-if="logado"><a ui-sref="meusanuncios"  style="color:#5e5d5d;border-right: #e6e6e6 1px solid;"><i class="fa fa-newspaper-o" aria-hidden="true"></i> &nbsp;MEUS ANÚNCIOS</a></li>
+                    <li><a ui-sref="busca"  style="color:#5e5d5d;"><i class="fa fa-search" aria-hidden="true"></i> &nbsp;PROCURAR IMÓVEIS</a></li>
+                </ul>
+
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a ui-sref="home" style="color:#5e5d5d;">Início</a></li>
+                    <li><a ui-sref="cadastro" style="color:#5e5d5d;">Cadastre-se</a></li>
+                    <li><a ui-sref="login"  style="color:#5e5d5d;">Entrar</a></li>
+
+                </ul>
+                <a href="" data-activates="nav-mobile" style="color:#5e5d5d;" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="container" style="margin-bottom: 150px;"> 
+       <div class="row center titleAdvertisement"><label> <i class="fa fa-newspaper-o" aria-hidden="true"></i> &nbsp;Meus Anúncios</label></div>
+       <div class="row center">
+           <a class="waves-effect waves-light btn deep-purple darken-1 left" ng-click="adicionarAnuncio()"><i class="fa fa-plus" aria-hidden="true" ></i> &nbsp;Criar anúncio</a>
+       </div>
+        <div class="row">
+            <div ng-if="listaMeusAnuncios.length == 0"class="col s12 center" style="color: #544db8;padding-top: 150px;font-size: 1.5rem;font-weight: 600;"><i class="fa fa-smile-o" aria-hidden="true"></i> &nbsp;Não perca tempo e crie seu primeiro anúncio!</div>
+            <div class="col s12" ng-repeat="anuncio in listaMeusAnuncios">
+                <div class="col s12 card-panel myAdvertisement">
+                    <label class="col s11 text-ellipsis" id="title"> <i class="material-icons" id="house">home</i> &nbsp;{{anuncio.tipomoradia}} - {{anuncio.logradouro}} - {{anuncio.bairro}}  - {{anuncio.cidade}} - {{anuncio.estado}}</label>
+                    <div class="col s1 center toggleDown{{$index}}" id="toggle" ng-click="anuncioToggle($index)"><i  class="fa fa-chevron-down " aria-hidden="true"></i></div>
+                    <div style="display: none" class="col s1 center toggleUp{{$index}}" id="toggle" ng-click="anuncioToggle($index)"><i  class="fa fa-chevron-up " aria-hidden="true"></i></div>
+                </div>
+                <div class="col s12 card-panel dsAdvertisement"  id="dsAdvertisementToggle{{$index}}">
+                    <div class="col s12" style="float: right; margin-bottom: 20px;">
+                        <a class="waves-effect waves-light btn green darken-3 left" ng-click="salvarAnuncio($index)"><i class="fa fa-floppy-o" aria-hidden="true"></i> &nbsp;Salvar anúncio</a>
+                        <a style="margin-left: 20px;"class="waves-effect waves-light btn red darken-3 left" ng-click="excluirAnuncio($index)"><i class="fa fa-trash" aria-hidden="true"></i> &nbsp;Excluir anúncio</a>
+                    </div>
+                    <div class="col s12 l5">
+                        <p class="col s12 filterTitle no-padding">Fotos</p> 
+                        <div class="col s12 addPhoto no-padding">
+                            <a ngf-select="uploadFiles($files,$index)"  name="file" accept="image/*" ngf-max-size="2MB" ngf-model-invalid="errorFile" ><i class="fa fa-plus" aria-hidden="true"></i> &nbsp;adicionar foto</a>
+                        </div>
+                        <div class="col s12 listMyImages no-padding">
+                            <div ng-if="!anuncio.novoAnuncio" class="col s12 itemLMyImage" ng-repeat="foto in anuncio.fotos track by $index">
+                                <div class="col s6 no-padding center" id="image" style="margin-bottom: 15px;"><img class="materialboxed alignImage"  width="250" ng-src="{{foto}}"></div>
+                                <div class="col s6 center delPhoto"><a ng-click="excluirFoto($parent.$index,$index)"> <i class="fa fa-trash" aria-hidden="true"></i> &nbsp;excluir foto</a></div>
+                                <div class="col s12 divisorImagesList"></div>
+                            </div>
+
+                            <div ng-if="anuncio.novoAnuncio" class="col s12 itemLMyImage" ng-repeat="foto in anuncio.fotos track by $index">
+                                <div class="col s6 no-padding center" id="image" style="margin-bottom: 15px;"><img class="materialboxed alignImage"  width="250" data-ng-src="{{foto}}"></div>
+                                <div class="col s6 center delPhoto"><a ng-click="excluirFoto($parent.$index,$index)"> <i class="fa fa-trash" aria-hidden="true"></i> &nbsp;excluir foto</a></div>
+                                <div class="col s12 divisorImagesList"></div>
+                            </div>
+                                                    
+                        </div>
+                    </div>
+                    <div class="col s12 l7">
+                        <div class="col s6">
+                            <p class="col s12 filterTitle">Tipo de anúncio</p>  
+                            <select class="col s12 padSelFiler" ng-model="anuncio.tipoproposta">
+                                <option value="" selected>Selecione</option>
+                                <option value="Venda">Venda</option>
+                                <option value="Aluguel">Aluguel</option>
+                            </select>
+                        </div>
+                        <div class="col s6">
+                            <p class="col s12 filterTitle" >Tipo de moradia</p>  
+                            <select class="col s12 padSelFiler" ng-model="anuncio.tipomoradia">
+                                <option value="" selected>Selecione</option>
+                                <option value="Casa">Casa</option>
+                                <option value="Apartamento">Apartamento</option>
+                            </select>
+                        </div>
+                        <div class="col s6">
+                            <p class="col s12 filterTitle">Espaço</p>  
+                            <div class="col s12 no-Padding-right"> 
+                                <input type="number" class="col s12 inputPadding" ng-model="anuncio.espaco">
+                            </div>
+                        </div>
+                        <div class="col s6">
+                            <p class="col s12 filterTitle">Preço</p> 
+                            <div class="col s12 no-Padding-right">  
+                                <input type="number" class="col s12 inputPadding" ng-model="anuncio.valor">
+                            </div>
+                        </div>
+                        <div class="col s6">
+                            <p class="col s12 filterTitle">Quartos</p> 
+                            <div class="col s12 no-Padding-right">  
+                                <input  class="col s12 inputPadding" ng-model="anuncio.numeroquartos">
+                            </div>
+                        </div>
+                        <div class="col s6">
+                            <p class="col s12 filterTitle">Vagas Estacionamento</p>
+                            <div class="col s12 no-Padding-right">   
+                                <input  class="col s12 inputPadding" ng-model="anuncio.vagasestacionamento">
+                            </div>
+                        </div>
+                        <div class="col s8">
+                            <p class="col s12 filterTitle">Endereço</p>  
+                            <div class="col s12 no-Padding-right"> 
+                                <input type="text" class="col s12 inputPadding" ng-model="anuncio.logradouro">
+                            </div>
+                        </div>                        
+                        <div class="col s4">
+                            <p class="col s12 filterTitle">Bairro</p>  
+                            <div class="col s12 no-Padding-right">
+                                <input type="text" class="col s12" ng-model="anuncio.bairro">
+                            </div>
+                        </div>
+                        <div class="col s6">
+                            <p class="col s12 filterTitle">Estado</p>  
+                            <select class="col s12 padSelFiler" ng-model="anuncio.estado" ng-change="estadoChange($index)">
+                                <option value="" selected>Selecione</option>
+                                <option ng-repeat="estado in estados" value="{{estado.nome}}">{{estado.nome}}</option>
+                            </select>
+                        </div>
+                        <div class="col s6">
+                            <p class="col s12 filterTitle">Cidade</p>  
+                            <select class="col s12 padSelFiler" ng-model="anuncio.cidade">
+                                <option value="" selected>Selecione</option>
+                                <option ng-repeat="cidade in anuncio.cidades" value="{{cidade.nome}}">{{cidade.nome}}</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    <div class="col s12">
+                        <p class="col s12 filterTitle no-padding">Descrição</p>
+                        <textarea class="col s12 descCrud" ng-model="anuncio.descricao">{{anuncio.descricao}}</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="footer"></div>

@@ -1,0 +1,90 @@
+<script src="js/init.js"></script>  
+<div ng-controller="detalhes-anuncioController" ng-cloak>
+    <div>
+        <!-- <div class="menuBar"></div> -->
+        <nav  class="grey lighten-5" role="navigation">
+            <div ng-if="!logado" class="credentialOptionDiv">
+                <label><a ui-sref="credencial" class="credentialOption">Entrar</a></label>
+                <label>ou</label>
+                <label><a ui-sref="credencial" class="credentialOption">Cadastre-se</a></label>
+            </div>
+            <div ng-if="logado" class="credentialOptionDiv text-ellipsis" style="width: 150px;" >
+                
+                <label style="color: #8e24aa; font-size: 1.2rem;font-weight: 600;"><i class="fa fa-user-o" aria-hidden="true"></i>{{dadosUsuario.nomeBarra}}</label>
+                <label ng-click="deslogar()" style="cursor:pointer;color: #0e63c4; font-size: 0.8rem;font-weight: 600;margin-left:10px;"> Sair</label>
+            </div>
+            <div class="nav-wrapper container">
+                
+                <a id="logo-container" ui-sref="home" class="brand-logo"><img style="width:110px;" src="images/logo9.png"></img></a>
+                <ul class="right hide-on-med-and-down"> 
+                    <li><a ui-sref="home"  style="color:#5e5d5d; border-right: #e6e6e6 1px solid;"><i class="fa fa-home"  aria-hidden="true"></i> &nbsp;HOME</a></li>
+                    <li ng-if="logado"><a ui-sref="meusanuncios"  style="color:#5e5d5d;border-right: #e6e6e6 1px solid;"><i class="fa fa-newspaper-o" aria-hidden="true"></i> &nbsp;MEUS ANÚNCIOS</a></li>
+                    <li><a ui-sref="busca"  style="color:#5e5d5d;"><i class="fa fa-search" aria-hidden="true"></i> &nbsp;PROCURAR IMÓVEIS</a></li>
+                </ul>
+
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a ui-sref="home" style="color:#5e5d5d;">Início</a></li>
+                    <li><a ui-sref="cadastro" style="color:#5e5d5d;">Cadastre-se</a></li>
+                    <li><a ui-sref="login"  style="color:#5e5d5d;">Entrar</a></li>
+
+                </ul>
+                <a href="" data-activates="nav-mobile" style="color:#5e5d5d;" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="container"> 
+        <div class="row" style="margin-top:50px;">
+            <div class="col m1"> <i class="fa fa-chevron-left arrow-image right" aria-hidden="true"></i> </div>
+            <div class="slider col m6">
+                <ul class="slides">                    
+                    <li ng-repeat="fotoAnuncio in listaFotosAnuncio track by $index">                      
+                        
+                        <img ng-src="{{fotoAnuncio}}"> <!-- random image -->
+                        <div class="caption right-align">
+                            
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="col m1" ng-click="next()"> <i class="fa fa-chevron-right arrow-image" aria-hidden="true"></i> </div>
+            <div class="col m4 no-padding">   
+                <div class="col m12 center card-panel contOffer">
+                    <p class="telCont">Telefone para contato</p>
+                    <p class="telNumber">(13) {{telefoneContato}}</p>
+                </div>
+
+                <div class="col m12 center card-panel priceOffer">
+                    <p class="priceTitle">Valor para aluguel</p>
+                    <p class="priceNumber">R$ {{dadosAnuncio.valor}},00</p>
+                </div>
+            </div> 
+            
+        </div>
+        <div class="row card-panel border" style="margin-top: 30px; border-left: 5px #1565c0 solid;">
+            <div class="col m12">
+                <label class="titleAdd">Casa para aluguel</label>  
+                <label class="descAddress">{{dadosAnuncio.logradouro}} - {{dadosAnuncio.bairro}} - {{dadosAnuncio.cidade}} - {{dadosAnuncio.estado}}</label>    
+            </div>
+            <div class="col m12 no-padding" style="margin-top:50px;">
+                <div class="col m4 titleDescOffer">
+                    <label class="desc">{{dadosAnuncio.espaco}}m² </label><label class="title"> Área útil</label>  
+                </div>
+                <div class="col m4 titleDescOffer">
+                    <label class="desc">{{dadosAnuncio.numeroquartos}} </label><label class="title"> Quarto(s)</label>
+                </div>
+                <div class="col m4 titleDescOffer">
+                    <label class="desc">{{dadosAnuncio.vagasestacionamento}} </label><label class="title"> Vaga(s) Estacionamento</label>
+                </div>
+                
+            </div>
+            <div class="col m12" style="margin-top:50px;">
+              <label class="titleAdd">Descrição</label>
+              <p>{{dadosAnuncio.descricao}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="footer"></div>

@@ -1,0 +1,170 @@
+<script src="js/init.js"></script>  
+
+<div ng-controller="buscaController">
+    <div>
+        <!-- <div class="menuBar"></div> -->
+        <nav  class="grey lighten-5" role="navigation">
+            <div ng-if="!logado" class="credentialOptionDiv">
+                <label><a ui-sref="credencial" class="credentialOption">Entrar</a></label>
+                <label>ou</label>
+                <label><a ui-sref="credencial" class="credentialOption">Cadastre-se</a></label>
+            </div>
+            <div ng-if="logado" class="credentialOptionDiv text-ellipsis" style="width: 150px;" >
+                
+                <label style="color: #8e24aa; font-size: 1.2rem;font-weight: 600;"><i class="fa fa-user-o" aria-hidden="true"></i>{{dadosUsuario.nomeBarra}}</label>
+                <label ng-click="deslogar()" style="cursor:pointer;color: #0e63c4; font-size: 0.8rem;font-weight: 600;margin-left:10px;"> Sair</label>
+            </div>
+            <div class="nav-wrapper container">
+                
+                <a id="logo-container" ui-sref="home" class="brand-logo"><img style="width:110px;" src="images/logo9.png"></img></a>
+                <ul class="right hide-on-med-and-down"> 
+                    <li><a ui-sref="home"  style="color:#5e5d5d; border-right: #e6e6e6 1px solid;"><i class="fa fa-home"  aria-hidden="true"></i> &nbsp;HOME</a></li>
+                    <li ng-if="logado"><a ui-sref="meusanuncios"  style="color:#5e5d5d;border-right: #e6e6e6 1px solid;"><i class="fa fa-newspaper-o" aria-hidden="true"></i> &nbsp;MEUS ANÚNCIOS</a></li>
+                    <li><a ui-sref="busca"  style="color:#5e5d5d;"><i class="fa fa-search" aria-hidden="true"></i> &nbsp;PROCURAR IMÓVEIS</a></li>
+                </ul>
+
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a ui-sref="home" style="color:#5e5d5d;">Início</a></li>
+                    <li><a ui-sref="cadastro" style="color:#5e5d5d;">Cadastre-se</a></li>
+                    <li><a ui-sref="login"  style="color:#5e5d5d;">Entrar</a></li>
+
+                </ul>
+                <a href="" data-activates="nav-mobile" style="color:#5e5d5d;" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
+    
+    
+    <div class="container"> 
+        <div class"section">
+            <form action="#">
+                <div class="row backFilters card-panel">
+                    <div class="col s12 center filterTitleHead"><label><i class="fa fa-filter" aria-hidden="true"></i>Defina aqui o você procura</label></div>
+                    <div class="col s6 l3 borderRFilter" style="height: 115px;">
+                        <p class="col s12 filterTitle">Oferta</p>
+                        <div class="col s12" style="margin-top:22px;">
+                            <label >
+                                <input class="with-gap" name="opcOferta" ng-model="filters.tipoOferta" value="Venda"  type="radio" id="opcVenda" />
+                                <label  for="opcVenda">Venda</label>
+                            </label>
+                            <label style="margin-left: 5px;">
+                                <input class="with-gap" name="opcOferta" ng-model="filters.tipoOferta" value="Aluguel" type="radio" id="opcAluguel" />
+                                <label  for="opcAluguel">Aluguel</label>
+                            </label>  
+                        </div>                  
+                    </div>
+                    
+                    <div class="col s6 l3 borderRFilter borderFilterRSMHide">
+                        <p class="col s12 filterTitle">Tipo de moradia</p>                            
+                        <select class="col s12 padSelFiler" ng-model="filters.tipoMoradia">
+                            <option value="" selected>Selecione</option>
+                            <option value="Casa">Casa</option>
+                            <option value="Apartamento">Apartamento</option>
+                        </select>                                                   
+                    </div>
+
+                    <div class="col s12 borderTFilter borderFilterSMHide"></div>
+
+                    <div class="col s6 l3 borderRFilter">
+                        <p class="col s12 filterTitle ">Estado</p>                                               
+                        <select class="col s12 padSelFiler" ng-model="filters.estado" ng-change="estadoChange()">
+                            <option value="" selected>Selecione</option>
+                            <option ng-repeat="estado in estados" value="{{estado.id}}">{{estado.nome}}</option>                            
+                        </select>                                                   
+                    </div>
+
+                    <div class="col s6 l3">
+                        <p class="col s12 filterTitle">Cidade</p>   
+
+                        <select class="col s12 padSelFiler"  ng-model="filters.cidade">
+                            <option value="" selected>Selecione</option>
+                            <option ng-repeat="cidade in cidades" value="{{cidade.id}}">{{cidade.nome}}</option>  
+                        </select>                                                   
+                    </div>
+                    
+                    <div class="col s12 borderTFilter"></div>
+
+                    <div class="col s6 l3 borderRFilter">
+                        <p class="col s12 filterTitle">Preço</p>
+                        <div class="col s12">
+                            <input type="number" class="col s4" value="0" disabled="disabled">
+                            <label class="col s4 center">ATÉ</label>
+                            <input type="number" class="col s4" ng-model="preco.minValue">
+                        </div>
+                        <rzslider class="col s12"
+                            rz-slider-model="preco.minValue"
+                            rz-slider-high="preco.maxValue"
+                            rz-slider-options="preco.options"></rzslider>
+                    </div>
+
+                    <div class="col s6 l3 borderRFilter borderFilterRSMHide">
+                        <p class="col s12 filterTitle">Espaço</p>
+                        <div class="col s12">
+                            <input type="number" class="col s4" value="0" disabled="disabled">
+                            <label class="col s4 center">ATÉ</label>
+                            <input type="number" class="col s4" ng-model="espaco.minValue">
+                        </div>
+                        <rzslider class="col s12"
+                            rz-slider-model="espaco.minValue"
+                            rz-slider-high="espaco.maxValue"
+                            rz-slider-options="espaco.options"></rzslider>
+                    </div>
+
+                    <div class="col s12 borderTFilter borderFilterSMHide"></div>
+
+                    <div class="col s6 l3 borderRFilter" style="height: 166px;;">
+                        <p class="col s12 filterTitle" style="margin-bottom: 22px;">Quartos</p>                        
+                        <rzslider class="col s12"
+                            rz-slider-model="quartos.minValue"
+                            rz-slider-high="quartos.maxValue"
+                            rz-slider-options="quartos.options"></rzslider>
+                    </div>
+
+                    <div class="col s6 l3">
+                        <p class="col s12 filterTitle" style="margin-bottom: 22px;">Vagas Estacionamento</p>   
+                                       
+                        <rzslider class="col s12"
+                            rz-slider-model="vagasEstacionamento.minValue"
+                            rz-slider-high="vagasEstacionamento.maxValue"
+                            rz-slider-options="vagasEstacionamento.options"
+
+                            ></rzslider>
+                    </div>
+                    <div class="col s12 center" style="margin-top: 30px;"><a class="waves-effect waves-light btn  deep-purple darken-1" ng-click="buscarAnuncios()">BUSCAR</a></div>
+                </div>
+            </form>
+        </div>   
+        <div class="row espacoHome" ng-repeat="anuncio in listaBuscaOferta">
+            <div class="col m12 card-panel hoverable backWhite no-padding imOffer">
+                <div class="col s12 l4 xl4 imageOffer" style="background-image: url('{{'http://localhost:8080/static/img/'+anuncio[0].id+'/1'}}');" ng-click="detalhesAnuncio(anuncio[0].id)"></div>
+                <div class="col s12 l4 xl3 no-padding ">
+                    <div ng-click="detalhesAnuncio(anuncio[0].id)" class="subTitleTipo changeColorOfferSub">{{anuncio[0].tipoproposta}}</div>
+                    <div ng-click="detalhesAnuncio(anuncio[0].id)" class="subTitlePreco changeColorOfferSub">R$ {{numberToReal(anuncio[0].valor)}}</div>
+                </div>
+                <div class="col s12 l4 xl5 offerText">
+                    <div class="offerTitleClick" ng-click="detalhesAnuncio(anuncio[0].id)">
+                        <label class="offerTitle changeColorOffer">{{anuncio[0].bairro}}</label>
+                        <label class="offerTitle changeColorOffer">{{anuncio[0].logradouro}} - {{anuncio[0].cidade}} - {{anuncio[0].estado}}</label>
+                    </div>
+                    <div class="offerDesc"><label>{{anuncio[0].descricao}} </label></div>
+                    <label class="plusOffer" ng-click="detalhesAnuncio(anuncio[0].id)">Ver mais</label>
+                </div>
+            </div>
+
+           
+            
+        </div>
+        
+        
+    </div>
+        <div class="row">
+            <div class="center col s12 m6 offset-m3 paginationIm">
+                <button ng-click="paginacao(2)" class="waves-effect waves-light btn  deep-purple darken-1"><i class="material-icons">keyboard_arrow_left</i></button>
+                <input maxlength="9" placeholder="N°" ng-model="pagination">                
+                <button ng-click="paginacao(1)" class="waves-effect waves-light btn  deep-purple darken-1" style="margin-left: 5px;"><i class="material-icons">keyboard_arrow_right</i></button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="footer"></div>

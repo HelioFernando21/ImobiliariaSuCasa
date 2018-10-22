@@ -1,0 +1,22 @@
+/static StaticR Static appStatic
+
+/favicon.ico FaviconR GET
+/robots.txt RobotsR GET
+
+/home/                              HomeR       GET -- get: lista todas as recentes
+/oferta/#UsuarioId                  OfertaR     POST -- cadastra uma oferta
+/ofertaDet/#OfertaId                  EspOfertaR  GET 
+/crudOferta/#OfertaId/#UsuarioId    CrudR       PUT DELETE -- busca, altera e deleta uma oferta
+/estados                            EstadoR     GET -- lista todos os estados
+/cidades                            CidadeR     GET -- lista todas as cidades
+/cidades/#EstadoId/estado           EstCidsR    GET -- lista as cidades de um determinado estado
+/meusanuncios/#UsuarioId            MAnuncioR   GET -- lista os anuncios de um determinado usuário 
+/Busca/#Int                         BuscR       POST
+
+/cadastro                       CadastraUsuR POST
+/login                              IniciarSessaoR       POST
+/logout/#UsuarioId                  FinalSessaoR         POST
+/ofertafull/                        OfertaComFoto        GET
+/foto/#OfertaId                     FotoR                POST -- cadastra uma foto
+/listarFotos/#OfertaId              LisFotoR             GET
+

@@ -1,0 +1,120 @@
+<script src="js/init.js"></script>  
+<div ng-controller="credencialController">    
+    <div>
+        <!-- <div class="menuBar"></div> -->
+        <nav  class="grey lighten-5" role="navigation">
+            <div ng-if="!logado" class="credentialOptionDiv">
+                <label><a ui-sref="credencial" class="credentialOption">Entrar</a></label>
+                <label>ou</label>
+                <label><a ui-sref="credencial" class="credentialOption">Cadastre-se</a></label>
+            </div>
+            <div ng-if="logado" class="credentialOptionDiv text-ellipsis" style="width: 150px;" >
+                
+                <label style="color: #8e24aa; font-size: 1.2rem;font-weight: 600;"><i class="fa fa-user-o" aria-hidden="true"></i>{{dadosUsu.nomeBarra}}</label>
+                <label ng-click="deslogar()" style="cursor:pointer;color: #0e63c4; font-size: 0.8rem;font-weight: 600;margin-left:10px;"> Sair</label>
+            </div>
+            <div class="nav-wrapper container">
+                
+                <a id="logo-container" ui-sref="home" class="brand-logo"><img style="width:110px;" src="images/logo9.png"></img></a>
+                <ul class="right hide-on-med-and-down"> 
+                    <li><a ui-sref="home"  style="color:#5e5d5d; border-right: #e6e6e6 1px solid;"><i class="fa fa-home"  aria-hidden="true"></i> &nbsp;HOME</a></li>
+                    <li ng-if="logado"><a ui-sref="meusanuncios"  style="color:#5e5d5d;border-right: #e6e6e6 1px solid;"><i class="fa fa-newspaper-o" aria-hidden="true"></i> &nbsp;MEUS ANÚNCIOS</a></li>
+                    <li><a ui-sref="busca"  style="color:#5e5d5d;"><i class="fa fa-search" aria-hidden="true"></i> &nbsp;PROCURAR IMÓVEIS</a></li>
+                </ul>
+
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a ui-sref="home" style="color:#5e5d5d;">Início</a></li>
+                    <li><a ui-sref="cadastro" style="color:#5e5d5d;">Cadastre-se</a></li>
+                    <li><a ui-sref="login"  style="color:#5e5d5d;">Entrar</a></li>
+
+                </ul>
+                <a href="" data-activates="nav-mobile" style="color:#5e5d5d;" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
+   
+    <div class="container"> 
+        <div class="row center" style="margin: 30px 0px;">  
+            <label class="credentialPhrase">Faça o login para acessar sua conta. Caso não tenha, não perca mais tempo e se cadastre</label>
+        </div>
+        <div class="row">
+            <div class="col s12 l5">
+                <div class="section">
+                    <form  class=" card-panel hoverable" name="frmLogin" style="margin-top:40px;background:#ffffff; padding:20px 40px 40px 40px;">
+                        <div class="input-field">
+                            <h5>Acessar minha conta</h5>
+                        </div>
+                        <div class="input-field">
+                            <label for="txtEmail">Digite seu e-mail</label>
+                            <input id="txtEmailLogin" type="email" name="email" ng-model="dadosLogin.email" class="validate" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="txtSenha">Digite sua senha</label>
+                            <input id="txtSenhaLogin" type="password" name="senha" ng-model="dadosLogin.senha" class="validate" required>
+                        </div>
+                        <div> 
+                            <a href="#!esqueci" >Esqueceu sua senha?</a>
+                        </div>
+                        <div style="margin-top: 20px;" class="center">
+                            <button class="waves-effect waves-light btn amber darken-4" type="button" ng-click="logar()" >ENTRAR</button>
+                        </div> 
+                        
+                        <div class="center credentialOptionCad hide-on-large-only">
+                            <label >Ainda não tenho conta</label>
+                            <button class="waves-effect waves-light btn   deep-purple darken-1" type="button" ng-click="submit()" >CADASTRAR</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+            <div class="col m1 offset-m1 divisaoCredencial hide-on-med-and-down" ></div>
+            <div class="col s12 l5">
+                <div class="section">
+                    <form  class=" card-panel hoverable" name="frmCadastro" style="margin-top:40px;background:#ffffff; padding:20px 40px 40px 40px;">
+                        
+                        <div class="input-field ">
+                            <h5>Ainda não tenho conta</h5>
+                        </div>
+                        <div class="input-field">
+                            <label for="txtName">Nome completo</label>
+                            <input id="txtName" type="text" name="nome" ng-model="dadosCad.nome" class="validate" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="txtBirth">Data de nascimento</label>
+                            <input id="txtBirth" type="text" name="nascimento" ng-model="dadosCad.dtNascimento"  required>
+                        </div>
+                        <div class="input-field">
+                            <label for="txtEmail">E-mail</label>
+                            <input id="txtEmail" type="email" name="email" ng-model="dadosCad.email" class="validate" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="txtTelefone">Telefone</label>
+                            <input id="txtTelefone" type="text" name="telefone" ng-model="dadosCad.telefone" class="validate" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="txtSenha">Senha</label>
+                            <input id="txtSenha" type="password" name="senha" ng-model="dadosCad.senha"  required>
+                        </div>
+                        <div class="input-field">
+                            <label for="txtconfSenha">Confirmar a senha</label>
+                            <input id="txtconfSenha" type="password" name="confSenha" ng-model="dadosCad.confSenha"   required>
+                        </div>                        
+                        <div  style="margin-top: 20px;" class="center">
+                            <button class="waves-effect waves-light btn  amber darken-4" type="button" ng-click="cadastrar()" >CADASTRAR</button>
+                        </div>
+
+                        <div class="credentialOptionCad center hide-on-large-only ">
+                            <label >Já tenho conta</label>
+                            <button class="waves-effect waves-light btn  deep-purple darken-1" type="button" ng-click="submit()" >ENTRAR</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+
+</div>
+
+<div id="footer"></div>
