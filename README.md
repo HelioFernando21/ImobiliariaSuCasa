@@ -2,12 +2,12 @@
 
 site de venda de imóveis que utiliza as seguintes tecnologias:
 
-AngularJS,
-Materialize e 
-Yesod Web Framework
+* AngularJS
+* Materialize
+* Yesod Web Framework
 
-Desenvolvedores:
+# Desenvolvedores:
 
-HELIO FERNANDO MENDONÇA LOURENÇO ROSA,
-ALEXANDRE NASCIMENTO ARAÚJO e
-KARINA DA SILVA MOREIRA
+* HELIO FERNANDO MENDONÇA LOURENÇO ROSA,
+* ALEXANDRE NASCIMENTO ARAÚJO e
+* KARINA DA SILVA MOREIRA
